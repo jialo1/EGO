@@ -14,7 +14,7 @@ const locations = [
     city: "Abidjan",
     status: "Siège social",
     description:
-      "Notre siège principal et centre d'opérations. Toute l'équipe E-GO est basée ici.",
+      "Siège principal et centre d'opérations.",
     isHQ: true,
     active: true,
   },
@@ -24,7 +24,7 @@ const locations = [
     city: "Dakar",
     status: "Opérationnel",
     description:
-      "Présence active à Dakar pour accompagner la communauté sénégalaise.",
+      "Présence active à Dakar.",
     isHQ: false,
     active: true,
   },
@@ -34,7 +34,7 @@ const locations = [
     city: "Accra",
     status: "En expansion",
     description:
-      "Développement en cours pour couvrir le marché ghanéen.",
+      "En expansion.",
     isHQ: false,
     active: false,
   },
@@ -44,7 +44,7 @@ const locations = [
     city: "Lagos",
     status: "En expansion",
     description:
-      "Préparation de l'entrée sur le plus grand marché africain.",
+      "En expansion.",
     isHQ: false,
     active: false,
   },
@@ -54,7 +54,7 @@ const locations = [
     city: "Nairobi",
     status: "En expansion",
     description:
-      "Extension vers l'Afrique de l'Est prévue prochainement.",
+      "En expansion.",
     isHQ: false,
     active: false,
   },
@@ -75,9 +75,7 @@ export default function Localisations() {
               <span className="text-primary">vous êtes.</span>
             </h1>
             <p className="mt-6 text-lg text-muted leading-relaxed max-w-2xl">
-              E-GO est basé à Abidjan et s&apos;étend progressivement à travers
-              l&apos;Afrique. Notre ambition : rapprocher la technologie de chaque
-              communauté.
+              Siège à Abidjan. Expansion en cours en Afrique.
             </p>
           </div>
         </div>
@@ -96,8 +94,7 @@ export default function Localisations() {
               Afrique de l&apos;Ouest & au-delà
             </h2>
             <p className="text-center text-muted max-w-lg mx-auto">
-              Siège à Abidjan, opérationnel à Dakar, et en expansion vers Accra,
-              Lagos et Nairobi.
+              Abidjan, Dakar. Expansion vers Accra, Lagos, Nairobi.
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 mt-10">
@@ -183,7 +180,7 @@ export default function Localisations() {
             Vous êtes dans l&apos;une de ces villes ?
           </h2>
           <p className="text-muted max-w-md mx-auto mb-8">
-            Contactez-nous pour démarrer votre demande de location-vente.
+            Contactez-nous pour démarrer.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

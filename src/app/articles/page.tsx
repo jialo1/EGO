@@ -27,8 +27,7 @@ export default function Articles() {
               <span className="text-primary">actualités.</span>
             </h1>
             <p className="mt-6 text-lg text-muted leading-relaxed max-w-2xl">
-              Tout ce que vous devez savoir sur la location-vente, les
-              échéanciers et l&apos;univers E-GO.
+              Guides, conseils et actualités E-GO.
             </p>
           </div>
 
@@ -133,12 +132,9 @@ export default function Articles() {
       {/* CTA */}
       <section className="py-24 bg-surface">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-8">
             Vous avez des questions ?
           </h2>
-          <p className="text-muted max-w-md mx-auto mb-8">
-            Contactez notre équipe pour obtenir des réponses personnalisées.
-          </p>
           <Link
             href="/echeanciers"
             className="inline-flex items-center justify-center gap-2 bg-primary text-white font-semibold px-8 py-4 rounded-xl hover:bg-primary-dark transition-all hover:scale-[1.02] shadow-md"

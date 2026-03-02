@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
-import { Menu, X, Smartphone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Accueil" },
@@ -19,13 +20,15 @@ export default function Navigation() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform">
-            <Smartphone className="w-4 h-4 text-white" />
-          </div>
-          <span className="text-xl font-bold tracking-tight">
-            E-<span className="text-primary">GO</span>
-          </span>
+        <Link href="/" className="flex items-center group hover:opacity-90 transition-opacity">
+          <Image
+            src="/logo.png"
+            alt="E-GO"
+            width={100}
+            height={40}
+            className="h-10 w-auto"
+            priority
+          />
         </Link>
 
         <div className="hidden md:flex items-center gap-8">

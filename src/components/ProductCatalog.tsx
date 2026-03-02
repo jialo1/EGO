@@ -91,8 +91,7 @@ export default function ProductCatalog() {
               Nos articles disponibles
             </h2>
             <p className="mt-3 text-muted max-w-lg">
-              iPhone, iPad, Apple Watch — tous disponibles en location-vente
-              avec contrat et échéancier.
+              iPhone, iPad, Apple Watch. Contrat et échéancier inclus.
             </p>
           </div>
 
@@ -125,11 +124,10 @@ export default function ProductCatalog() {
         <div className="mt-12 bg-primary/5 border border-primary/20 rounded-2xl p-8 flex flex-col sm:flex-row items-start sm:items-center gap-6">
           <div className="flex-1">
             <h3 className="font-bold text-lg mb-2">
-              Chaque article est couvert par un contrat officiel
+              Contrat officiel pour chaque article
             </h3>
             <p className="text-sm text-muted">
-              Signature de contrat, vérification des documents, échéancier clair
-              et suivi des paiements. Aucun frais caché.
+              Signature, vérification documents, échéancier. Pas de frais caché.
             </p>
           </div>
           <Link

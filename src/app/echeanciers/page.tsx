@@ -21,13 +21,13 @@ const plans = [
     icon: Clock,
     title: "Hebdomadaire",
     badge: "Populaire",
-    target: "Commerçants, travailleurs indépendants, vendeurs de marché",
+    target: "Commerçants, indépendants",
     duration: "4 à 8 semaines",
     example: "À partir de 25 000 FCFA / semaine",
     advantages: [
-      "Paiements plus légers et fréquents",
-      "Adapté aux revenus quotidiens",
-      "Durée courte, propriété rapide",
+      "Paiements légers et fréquents",
+      "Revenus quotidiens",
+      "Propriété rapide",
     ],
     documents: [
       "Pièce d'identité (CNI ou passeport)",
@@ -41,13 +41,13 @@ const plans = [
     icon: Calendar,
     title: "Quinzaine",
     badge: "Équilibré",
-    target: "Travailleurs réguliers, artisans, employés du secteur informel",
+    target: "Travailleurs réguliers",
     duration: "2 à 4 mois",
     example: "À partir de 45 000 FCFA / quinzaine",
     advantages: [
-      "Bon compromis fréquence / montant",
-      "Adapté aux revenus bi-mensuels",
-      "Suivi simple et régulier",
+      "Compromis fréquence / montant",
+      "Revenus bi-mensuels",
+      "Suivi régulier",
     ],
     documents: [
       "Pièce d'identité (CNI ou passeport)",
@@ -61,13 +61,13 @@ const plans = [
     icon: TrendingUp,
     title: "Mensuel",
     badge: "Salariés",
-    target: "Salariés du secteur formel, fonctionnaires",
+    target: "Salariés, fonctionnaires",
     duration: "3 à 6 mois",
     example: "À partir de 75 000 FCFA / mois",
     advantages: [
-      "Aligné sur les dates de salaire",
+      "Aligné sur les dates de paie",
       "Montants prévisibles",
-      "Idéal pour les budgets mensuels",
+      "Budgets mensuels",
     ],
     documents: [
       "Pièce d'identité (CNI ou passeport)",
@@ -93,9 +93,8 @@ export default function Echeanciers() {
               Payez à{" "}
               <span className="text-primary">votre rythme.</span>
             </h1>
-            <p className="mt-6 text-lg text-muted leading-relaxed max-w-2xl">
-              Trois modes de paiement adaptés à votre profil. Chaque échéancier
-              est encadré par un contrat officiel et un suivi transparent.
+              <p className="mt-6 text-lg text-muted leading-relaxed max-w-2xl">
+              Trois modes. Contrat officiel.
             </p>
           </div>
         </div>
@@ -210,10 +209,8 @@ export default function Echeanciers() {
             <div>
               <h3 className="font-semibold mb-2">Important</h3>
               <p className="text-sm text-muted leading-relaxed">
-                Les montants indiqués sont des estimations à titre indicatif.
-                L&apos;échéancier exact dépend du modèle choisi, de la durée et
-                de votre profil. Un conseiller E-GO vous accompagnera pour
-                établir un plan personnalisé avec un contrat officiel.
+                Montants indicatifs. L&apos;échéancier exact dépend du modèle et de votre profil.
+                Un conseiller vous accompagnera.
               </p>
             </div>
           </div>
@@ -227,8 +224,7 @@ export default function Echeanciers() {
             Prêt à démarrer ?
           </h2>
           <p className="text-muted max-w-md mx-auto mb-8">
-            Contactez-nous pour recevoir votre échéancier personnalisé et
-            commencer votre demande.
+            Contactez-nous pour votre échéancier personnalisé.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

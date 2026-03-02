@@ -44,8 +44,7 @@ export default function Home() {
             </h1>
 
             <p className="mt-6 text-lg text-muted max-w-lg leading-relaxed">
-              Un process structuré, un contrat officiel, un suivi en temps réel.
-              E-GO rend la technologie accessible en toute sécurité.
+              Contrat, suivi, échéancier. La technologie accessible.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mt-10">
@@ -83,28 +82,14 @@ export default function Home() {
 
           <div className="hidden lg:flex items-center justify-center">
             <div className="relative">
-              <div className="w-72 h-[520px] bg-gradient-to-b from-surface-light to-surface rounded-[3rem] border border-border flex flex-col items-center justify-center p-8 shadow-xl">
-                <div className="relative w-36 h-48 mb-4">
-                  <Image
-                    src="/products/iphone-15-pro.png"
-                    alt="iPhone 15 Pro"
-                    fill
-                    className="object-contain"
-                    priority
-                  />
-                </div>
-                <p className="text-lg font-semibold text-center">iPhone 15 Pro</p>
-                <p className="text-sm text-muted mt-2 text-center">À partir de</p>
-                <p className="text-3xl font-bold text-primary mt-1">35 000 F</p>
-                <p className="text-xs text-muted">/semaine</p>
-                <div className="mt-6 w-full space-y-3">
-                  {["Titane", "A17 Pro", "Contrat inclus"].map((feat) => (
-                    <div key={feat} className="flex items-center gap-2 text-sm text-muted">
-                      <Check className="w-4 h-4 text-primary" />
-                      {feat}
-                    </div>
-                  ))}
-                </div>
+              <div className="relative w-[420px] h-[520px] rounded-3xl overflow-hidden">
+                <Image
+                  src="/hero-person.png"
+                  alt="Cliente E-GO souriante avec son iPhone"
+                  fill
+                  className="object-cover object-top"
+                  priority
+                />
               </div>
               <div className="absolute -bottom-4 -right-4 w-72 h-72 bg-primary/10 rounded-full blur-2xl -z-10" />
             </div>
@@ -118,12 +103,9 @@ export default function Home() {
       {/* COMMENT ÇA MARCHE */}
       <section className="py-24 bg-surface">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <p className="text-sm font-semibold text-primary mb-2 uppercase tracking-wider">Process</p>
             <h2 className="text-3xl sm:text-4xl font-bold">Comment ça marche ?</h2>
-            <p className="mt-4 text-muted max-w-lg mx-auto">
-              Un processus simple, transparent et sécurisé en trois étapes.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -132,19 +114,19 @@ export default function Home() {
                 step: "01",
                 icon: Smartphone,
                 title: "Choisissez votre modèle",
-                desc: "Sélectionnez l'iPhone qui vous convient et le mode de paiement adapté à votre rythme.",
+                desc: "iPhone, iPad ou Watch. Mode de paiement adapté à votre rythme.",
               },
               {
                 step: "02",
                 icon: FileText,
                 title: "Fournissez vos documents",
-                desc: "Pièce d'identité, justificatif de revenu. Nous vérifions et préparons votre contrat.",
+                desc: "CNI, justificatif de revenu. Vérification et contrat.",
               },
               {
                 step: "03",
                 icon: Check,
                 title: "Recevez & payez",
-                desc: "Recevez votre iPhone immédiatement. Suivez vos paiements via votre échéancier personnalisé.",
+                desc: "Livraison immédiate. Suivi via votre échéancier.",
               },
             ].map(({ step, icon: Icon, title, desc }) => (
               <div
@@ -168,16 +150,13 @@ export default function Home() {
       {/* ÉCHÉANCIERS APERÇU */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <p className="text-sm font-semibold text-primary mb-2 uppercase tracking-wider">
               Flexibilité
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold">
               Un échéancier adapté à votre rythme
             </h2>
-            <p className="mt-4 text-muted max-w-lg mx-auto">
-              Choisissez le mode de paiement qui correspond à votre situation.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -239,12 +218,12 @@ export default function Home() {
       {/* POURQUOI E-GO */}
       <section className="py-24 bg-surface">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <p className="text-sm font-semibold text-primary mb-2 uppercase tracking-wider">
               Avantages
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold">
-              Pourquoi choisir E-GO ?
+              Pourquoi E-GO ?
             </h2>
           </div>
 
@@ -253,22 +232,22 @@ export default function Home() {
               {
                 icon: Shield,
                 title: "Sécurité juridique",
-                desc: "Contrat officiel signé, cadre légal clair et respecté.",
+                desc: "Contrat officiel, cadre légal.",
               },
               {
                 icon: Lock,
                 title: "Process structuré",
-                desc: "Vérification des documents, suivi rigoureux de chaque dossier.",
+                desc: "Vérification documents, suivi rigoureux.",
               },
               {
                 icon: Handshake,
-                title: "Confiance mutuelle",
-                desc: "Relation transparente, pas de frais cachés ni de surprises.",
+                title: "Confiance",
+                desc: "Transparence, pas de frais cachés.",
               },
               {
                 icon: Users,
                 title: "Accessible à tous",
-                desc: "Commerçants, salariés, fonctionnaires : un plan pour chacun.",
+                desc: "Un plan pour chaque profil.",
               },
             ].map(({ icon: Icon, title, desc }) => (
               <div
@@ -295,20 +274,18 @@ export default function Home() {
                 Sécurité & Contrat
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-                Un cadre professionnel,
+                Cadre professionnel,
                 <br />
                 pas du crédit informel.
               </h2>
               <p className="text-muted leading-relaxed mb-8">
-                Chez E-GO, chaque transaction est encadrée par un contrat officiel.
-                Nous vérifions vos documents, établissons un échéancier clair et
-                assurons un suivi rigoureux. Votre sécurité est notre priorité.
+                Contrat officiel, vérification des documents, échéancier clair.
               </p>
               <Link
                 href="/a-propos"
                 className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
               >
-                En savoir plus sur notre approche <ArrowRight className="w-4 h-4" />
+                En savoir plus <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
 
@@ -317,22 +294,22 @@ export default function Home() {
                 {
                   icon: FileText,
                   title: "Signature de contrat",
-                  desc: "Chaque client signe un contrat officiel avant toute livraison.",
+                  desc: "Contrat officiel avant toute livraison.",
                 },
                 {
                   icon: Shield,
-                  title: "Vérification des documents",
-                  desc: "CNI, bulletins de paie, attestation employeur — tout est vérifié.",
+                  title: "Vérification documents",
+                  desc: "CNI, bulletins, attestation employeur.",
                 },
                 {
                   icon: Eye,
                   title: "Suivi transparent",
-                  desc: "Échéancier détaillé, rappels de paiement, historique accessible.",
+                  desc: "Échéancier, rappels, historique.",
                 },
                 {
                   icon: Lock,
                   title: "Protection des données",
-                  desc: "Vos informations personnelles sont sécurisées et confidentielles.",
+                  desc: "Informations sécurisées et confidentielles.",
                 },
               ].map(({ icon: Icon, title, desc }) => (
                 <div
@@ -370,17 +347,17 @@ export default function Home() {
               {
                 name: "Aminata K.",
                 role: "Commerçante, Abidjan",
-                text: "Grâce à E-GO, j'ai pu avoir mon iPhone en payant chaque semaine. Le processus était clair et professionnel.",
+                text: "Mon iPhone en payant chaque semaine. Process clair et pro.",
               },
               {
                 name: "Moussa D.",
                 role: "Fonctionnaire, Dakar",
-                text: "Le paiement mensuel correspond parfaitement à mon salaire. Le contrat m'a rassuré dès le départ.",
+                text: "Le paiement mensuel correspond à mon salaire. Le contrat m'a rassuré.",
               },
               {
                 name: "Fatou S.",
                 role: "Entrepreneuse, Abidjan",
-                text: "J'apprécie la transparence d'E-GO. Pas de frais cachés, un suivi en temps réel. Je recommande !",
+                text: "Transparence, pas de frais cachés. Je recommande !",
               },
             ].map(({ name, role, text }) => (
               <div
@@ -416,8 +393,7 @@ export default function Home() {
               Prêt à commencer ?
             </h2>
             <p className="text-muted max-w-md mx-auto mb-8">
-              Choisissez votre iPhone, sélectionnez votre échéancier et démarrez
-              votre demande en quelques minutes.
+              Choisissez votre modèle et démarrez votre demande.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

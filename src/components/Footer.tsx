@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Smartphone, Mail, Phone, MapPin } from "lucide-react";
+import Image from "next/image";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -7,17 +8,17 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="md:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <Smartphone className="w-4 h-4 text-white" />
-              </div>
-              <span className="text-xl font-bold tracking-tight text-white">
-                E-<span className="text-primary">GO</span>
-              </span>
+            <Link href="/" className="inline-block mb-4">
+              <Image
+                src="/logo.png"
+                alt="E-GO"
+                width={120}
+                height={48}
+                className="h-12 w-auto"
+              />
             </Link>
             <p className="text-sm text-white/60 leading-relaxed">
-              Location-vente sécurisée de smartphones en Afrique. Accédez à la
-              technologie, payez progressivement.
+              Location-vente smartphones en Afrique. Payez progressivement.
             </p>
           </div>
 

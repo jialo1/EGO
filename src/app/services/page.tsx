@@ -34,8 +34,7 @@ export default function Services() {
               votre smartphone.
             </h1>
             <p className="mt-6 text-lg text-muted leading-relaxed max-w-2xl">
-              Que vous soyez commerçant, salarié ou fonctionnaire, E-GO propose
-              un service adapté à votre profil et à votre rythme de paiement.
+              Un service adapté à chaque profil.
             </p>
           </div>
         </div>
@@ -54,16 +53,14 @@ export default function Services() {
                   </div>
                   <h2 className="text-2xl font-bold mb-4">Location-vente</h2>
                   <p className="text-muted leading-relaxed mb-6">
-                    Recevez votre iPhone immédiatement et payez sur une période de
-                    1 à 6 mois. Un contrat officiel encadre chaque transaction
-                    pour votre sécurité et la nôtre.
+                    iPhone immédiatement. Paiement sur 1 à 6 mois. Contrat officiel.
                   </p>
                   <ul className="space-y-3">
                     {[
-                      "Durée de 1 à 6 mois",
-                      "Contrat officiel signé",
-                      "Livraison immédiate après validation",
-                      "Suivi des paiements en temps réel",
+                      "1 à 6 mois",
+                      "Contrat signé",
+                      "Livraison immédiate",
+                      "Suivi en temps réel",
                     ].map((item) => (
                       <li key={item} className="flex items-center gap-3 text-sm">
                         <div className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
@@ -95,24 +92,24 @@ export default function Services() {
               </div>
               <h2 className="text-2xl font-bold mb-4">Paiement flexible</h2>
               <p className="text-muted leading-relaxed mb-6">
-                Choisissez le rythme de paiement qui correspond à vos revenus.
+                Un rythme adapté à vos revenus.
               </p>
               <div className="space-y-4">
                 {[
                   {
                     icon: Clock,
                     title: "Hebdomadaire",
-                    desc: "Idéal pour les commerçants et indépendants",
+                    desc: "Commerçants, indépendants",
                   },
                   {
                     icon: Calendar,
                     title: "Quinzaine",
-                    desc: "Pour les travailleurs à revenu régulier",
+                    desc: "Travailleurs réguliers",
                   },
                   {
                     icon: TrendingUp,
                     title: "Mensuel",
-                    desc: "Adapté aux salariés et fonctionnaires",
+                    desc: "Salariés, fonctionnaires",
                   },
                 ].map(({ icon: Icon, title, desc }) => (
                   <div
@@ -138,14 +135,13 @@ export default function Services() {
               </div>
               <h2 className="text-2xl font-bold mb-4">Troc & échange</h2>
               <p className="text-muted leading-relaxed mb-6">
-                Vous avez un ancien smartphone ? Échangez-le contre un modèle
-                plus récent. La valeur de reprise est déduite de votre échéancier.
+                Ancien smartphone ? Échangez-le. Valeur déduite de l&apos;échéancier.
               </p>
               <ul className="space-y-3">
                 {[
-                  "Évaluation gratuite de votre ancien appareil",
-                  "Réduction immédiate sur votre échéancier",
-                  "Large gamme de modèles acceptés",
+                  "Évaluation gratuite",
+                  "Réduction sur échéancier",
+                  "Large gamme acceptée",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-3 text-sm">
                     <div className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
@@ -168,9 +164,7 @@ export default function Services() {
                     Suivi & documents officiels
                   </h2>
                   <p className="text-muted leading-relaxed mb-6">
-                    Chaque dossier est accompagné de documents officiels : contrat
-                    de location-vente, échéancier de paiement, reçus et
-                    attestations. Tout est traçable et transparent.
+                    Contrat, échéancier, reçus, attestations. Tout est traçable.
                   </p>
                 </div>
                 <div className="space-y-3">
@@ -198,12 +192,9 @@ export default function Services() {
       {/* CTA */}
       <section className="py-24">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-8">
             Trouvez l&apos;offre qui vous correspond
           </h2>
-          <p className="text-muted max-w-md mx-auto mb-8">
-            Consultez nos échéanciers détaillés et commencez votre demande.
-          </p>
           <Link
             href="/echeanciers"
             className="inline-flex items-center justify-center gap-2 bg-primary text-white font-semibold px-8 py-4 rounded-xl hover:bg-primary-dark transition-all hover:scale-[1.02] shadow-md"

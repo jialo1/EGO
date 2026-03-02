@@ -33,10 +33,8 @@ export default function APropos() {
               <span className="text-primary">accessible</span> à tous.
             </h1>
             <p className="mt-6 text-lg text-muted leading-relaxed max-w-2xl">
-              E-GO est né d&apos;un constat simple : en Afrique, des millions de
-              personnes souhaitent accéder à un smartphone de qualité mais ne
-              peuvent pas payer la totalité immédiatement. Nous avons créé un
-              système de location-vente structuré, professionnel et accessible.
+              En Afrique, accéder à un smartphone de qualité sans tout payer d&apos;avance.
+              E-GO propose une location-vente structurée et accessible.
             </p>
           </div>
         </div>
@@ -52,9 +50,8 @@ export default function APropos() {
               </div>
               <h2 className="text-2xl font-bold mb-4">Notre Mission</h2>
               <p className="text-muted leading-relaxed">
-                Offrir à chaque Africain la possibilité d&apos;accéder à un
-                smartphone de qualité grâce à un système de location-vente
-                sécurisé, transparent et adapté à son rythme de paiement.
+                Rendre le smartphone accessible à tous via une location-vente
+                sécurisée et adaptée à chaque rythme de paiement.
               </p>
             </div>
 
@@ -64,9 +61,8 @@ export default function APropos() {
               </div>
               <h2 className="text-2xl font-bold mb-4">Notre Vision</h2>
               <p className="text-muted leading-relaxed">
-                Devenir le leader de la location-vente de smartphones en Afrique
-                de l&apos;Ouest et au-delà, en bâtissant un réseau de confiance
-                qui rapproche la technologie des populations.
+                Leader de la location-vente en Afrique de l&apos;Ouest.
+                Rapprocher la technologie des populations.
               </p>
             </div>
           </div>
@@ -90,19 +86,19 @@ export default function APropos() {
               {
                 icon: Shield,
                 title: "Transparence",
-                desc: "Chaque étape est documentée. Pas de frais cachés, pas de surprises. Vous savez exactement ce que vous payez et quand.",
+                desc: "Chaque étape documentée. Pas de frais cachés.",
                 color: "primary",
               },
               {
                 icon: RefreshCw,
                 title: "Flexibilité",
-                desc: "Paiement hebdomadaire, par quinzaine ou mensuel. Nous nous adaptons à votre réalité financière, pas l'inverse.",
+                desc: "Hebdo, quinzaine ou mensuel. On s&apos;adapte à vous.",
                 color: "accent",
               },
               {
                 icon: Handshake,
                 title: "Confiance",
-                desc: "Contrat officiel, vérification des documents, suivi rigoureux. Notre relation repose sur un cadre professionnel et respectueux.",
+                desc: "Contrat officiel, suivi rigoureux.",
                 color: "primary",
               },
             ].map(({ icon: Icon, title, desc, color }) => (
@@ -154,12 +150,9 @@ export default function APropos() {
       {/* CTA */}
       <section className="py-24">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-8">
             Prêt à nous rejoindre ?
           </h2>
-          <p className="text-muted max-w-md mx-auto mb-8">
-            Découvrez nos services et commencez votre demande dès maintenant.
-          </p>
           <Link
             href="/services"
             className="inline-flex items-center justify-center gap-2 bg-primary text-white font-semibold px-8 py-4 rounded-xl hover:bg-primary-dark transition-all hover:scale-[1.02] shadow-md"
