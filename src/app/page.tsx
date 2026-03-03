@@ -47,6 +47,19 @@ export default function Home() {
               Contrat, suivi, échéancier. La technologie accessible.
             </p>
 
+            {/* Image mobile : affichée après titre et sous-titre */}
+            <div className="flex lg:hidden items-center justify-center mt-8">
+              <div className="relative w-full max-w-[320px] aspect-[420/520] rounded-3xl overflow-hidden">
+                <Image
+                  src="/hero-store.png"
+                  alt="Conseiller E-GO présentant un smartphone à un client"
+                  fill
+                  className="object-cover object-top"
+                  priority
+                />
+              </div>
+            </div>
+
             <div className="flex flex-col sm:flex-row gap-4 mt-10">
               <Link
                 href="#catalogue"
@@ -84,8 +97,8 @@ export default function Home() {
             <div className="relative">
               <div className="relative w-[420px] h-[520px] rounded-3xl overflow-hidden">
                 <Image
-                  src="/hero-person.png"
-                  alt="Cliente E-GO souriante avec son iPhone"
+                  src="/hero-store.png"
+                  alt="Conseiller E-GO présentant un smartphone à un client"
                   fill
                   className="object-cover object-top"
                   priority
