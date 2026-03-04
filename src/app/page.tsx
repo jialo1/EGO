@@ -185,7 +185,7 @@ export default function Home() {
                 icon: Calendar,
                 title: "Quinzaine",
                 target: "Travailleurs réguliers",
-                duration: "2 à 4 mois",
+                duration: "6 mois payable chaque deux semaines",
                 highlight: true,
               },
               {

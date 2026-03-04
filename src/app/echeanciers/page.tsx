@@ -42,7 +42,7 @@ const plans = [
     title: "Quinzaine",
     badge: "Équilibré",
     target: "Travailleurs réguliers",
-    duration: "2 à 4 mois",
+    duration: "6 mois payable chaque deux semaines",
     example: "À partir de 45 000 FCFA / quinzaine",
     advantages: [
       "Compromis fréquence / montant",

@@ -73,7 +73,7 @@ Ce mode est idéal si vous avez des revenus quotidiens ou très réguliers. Les 
 
 **Pour qui ?** Travailleurs réguliers, artisans, employés du secteur informel.
 
-Un bon compromis entre fréquence et montant. Vous payez deux fois par mois sur une période de 2 à 4 mois. Simple et prévisible.
+Un bon compromis entre fréquence et montant. Vous payez chaque deux semaines sur une période de 6 mois. Simple et prévisible.
 
 ## Paiement mensuel
 
