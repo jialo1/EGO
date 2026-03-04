@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   Smartphone,
   CreditCard,
@@ -22,20 +23,54 @@ export default function Services() {
   return (
     <>
       {/* HERO */}
-      <section className="py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl">
-            <p className="text-sm font-semibold text-primary mb-4 uppercase tracking-wider">
-              Services
-            </p>
-            <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5" />
+        <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
+
+        <div className="relative max-w-7xl mx-auto px-6 py-24 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <div className="inline-flex items-center gap-2 bg-surface-light border border-border rounded-full px-4 py-2 mb-8 shadow-sm">
+              <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+              <span className="text-sm text-muted">Nos services</span>
+            </div>
+
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
               Des solutions{" "}
               <span className="text-primary">sur mesure</span> pour accéder à
               votre smartphone.
             </h1>
-            <p className="mt-6 text-lg text-muted leading-relaxed max-w-2xl">
-              Un service adapté à chaque profil.
+
+            <p className="mt-6 text-lg text-muted max-w-lg leading-relaxed">
+              Location-vente, paiement flexible, troc et suivi. Un service adapté à chaque profil.
             </p>
+
+            {/* Image mobile */}
+            <div className="flex lg:hidden items-center justify-center mt-10">
+              <div className="relative w-full max-w-[340px] aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/services-hero.png"
+                  alt="Conseiller E-GO présentant un smartphone à un client"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="hidden lg:flex items-center justify-center">
+            <div className="relative">
+              <div className="relative w-[480px] h-[360px] rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/services-hero.png"
+                  alt="Conseiller E-GO présentant un smartphone à un client"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <div className="absolute -bottom-4 -right-4 w-72 h-72 bg-primary/10 rounded-full blur-2xl -z-10" />
+            </div>
           </div>
         </div>
       </section>

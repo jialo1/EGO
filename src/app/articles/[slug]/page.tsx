@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, Clock, Tag, Calendar } from "lucide-react";
 import { articles, getArticleBySlug } from "@/lib/articles";
+import PageHero from "@/components/PageHero";
 
 export function generateStaticParams() {
   return articles.map((article) => ({ slug: article.slug }));
@@ -91,18 +92,22 @@ export default async function ArticlePage({
 
   return (
     <>
-      {/* HEADER */}
-      <section className="py-24 md:py-32">
+      <PageHero
+        badge={article.category}
+        title={article.title}
+        subtitle={article.excerpt}
+      />
+
+      <section className="pb-8">
         <div className="max-w-3xl mx-auto px-6">
           <Link
             href="/articles"
-            className="inline-flex items-center gap-2 text-sm text-muted hover:text-foreground transition-colors mb-8"
+            className="inline-flex items-center gap-2 text-sm text-muted hover:text-foreground transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             Retour aux articles
           </Link>
-
-          <div className="flex flex-wrap items-center gap-3 mb-6">
+          <div className="flex flex-wrap items-center gap-3 mt-4">
             <span className="inline-flex items-center gap-1.5 text-xs font-semibold bg-primary/10 text-primary px-3 py-1 rounded-full">
               <Tag className="w-3 h-3" />
               {article.category}
@@ -116,13 +121,6 @@ export default async function ArticlePage({
               {article.readTime} de lecture
             </span>
           </div>
-
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
-            {article.title}
-          </h1>
-          <p className="mt-6 text-lg text-muted leading-relaxed">
-            {article.excerpt}
-          </p>
         </div>
       </section>
 

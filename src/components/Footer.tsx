@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { navLinks } from "@/lib/navigation";
 
 export default function Footer() {
   return (
@@ -25,14 +26,7 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-semibold mb-4 text-white">Navigation</h4>
             <div className="space-y-3">
-              {[
-                { href: "/", label: "Accueil" },
-                { href: "/a-propos", label: "À propos" },
-                { href: "/services", label: "Services" },
-                { href: "/echeanciers", label: "Échéanciers" },
-                { href: "/articles", label: "Articles" },
-                { href: "/localisations", label: "Localisations" },
-              ].map((link) => (
+              {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}

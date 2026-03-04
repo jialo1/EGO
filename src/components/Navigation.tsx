@@ -2,20 +2,19 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-
-const navLinks = [
-  { href: "/", label: "Accueil" },
-  { href: "/a-propos", label: "À propos" },
-  { href: "/services", label: "Services" },
-  { href: "/echeanciers", label: "Échéanciers" },
-  { href: "/articles", label: "Articles" },
-  { href: "/localisations", label: "Localisations" },
-];
+import { navLinks } from "@/lib/navigation";
 
 export default function Navigation() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
+
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
@@ -36,7 +35,11 @@ export default function Navigation() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm text-muted hover:text-foreground transition-colors"
+              className={`text-sm transition-colors ${
+                isActive(link.href)
+                  ? "text-foreground font-semibold"
+                  : "text-muted hover:text-foreground"
+              }`}
             >
               {link.label}
             </Link>
@@ -65,7 +68,11 @@ export default function Navigation() {
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="block text-muted hover:text-foreground transition-colors"
+              className={`block transition-colors ${
+                isActive(link.href)
+                  ? "text-foreground font-semibold"
+                  : "text-muted hover:text-foreground"
+              }`}
             >
               {link.label}
             </Link>

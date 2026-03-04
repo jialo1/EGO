@@ -2,9 +2,9 @@ import { MapPin, ArrowRight, Building, Globe, Phone } from "lucide-react";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Localisations | E-GO",
+  title: "Contact | E-GO",
   description:
-    "Retrouvez E-GO à Abidjan, Dakar, Accra, Lagos et Nairobi. Location-vente de smartphones en Afrique.",
+    "Retrouvez E-GO à Abidjan, Dakar, Accra, Lagos et Nairobi. Contactez-nous pour la location-vente de smartphones en Afrique.",
 };
 
 const locations = [
@@ -60,29 +60,11 @@ const locations = [
   },
 ];
 
-export default function Localisations() {
+export default function Contact() {
   return (
     <>
-      {/* HERO */}
-      <section className="py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl">
-            <p className="text-sm font-semibold text-primary mb-4 uppercase tracking-wider">
-              Localisations
-            </p>
-            <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
-              Présents là où{" "}
-              <span className="text-primary">vous êtes.</span>
-            </h1>
-            <p className="mt-6 text-lg text-muted leading-relaxed max-w-2xl">
-              Siège à Abidjan. Expansion en cours en Afrique.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* MAP VISUAL */}
-      <section className="pb-24">
+      {/* MAP VISUAL - Pas de hero, contenu direct */}
+      <section className="pt-32 pb-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="bg-surface-light border border-border rounded-2xl p-10 md:p-16 mb-12 shadow-sm">
             <div className="flex items-center justify-center mb-8">
@@ -90,14 +72,14 @@ export default function Localisations() {
                 <Globe className="w-10 h-10 text-primary" />
               </div>
             </div>
-            <h2 className="text-2xl font-bold text-center mb-2">
-              Afrique de l&apos;Ouest & au-delà
-            </h2>
-            <p className="text-center text-muted max-w-lg mx-auto">
-              Abidjan, Dakar. Expansion vers Accra, Lagos, Nairobi.
+            <h1 className="text-2xl sm:text-3xl font-bold text-center mb-2">
+              Contact & Localisations
+            </h1>
+            <p className="text-center text-muted max-w-lg mx-auto mb-8">
+              Siège à Abidjan. Présents à Dakar. Expansion en cours en Afrique.
             </p>
 
-            <div className="flex flex-wrap justify-center gap-4 mt-10">
+            <div className="flex flex-wrap justify-center gap-4">
               {locations.map((loc) => (
                 <div
                   key={loc.city}

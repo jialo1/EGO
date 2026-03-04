@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   Check,
   Shield,
@@ -8,6 +9,8 @@ import {
   Users,
   Globe,
   TrendingUp,
+  Zap,
+  Target,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -20,94 +23,186 @@ export const metadata = {
 export default function APropos() {
   return (
     <>
-      {/* HERO - À propos de E-GO */}
-      <section className="py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl">
-            <p className="text-sm font-semibold text-primary mb-4 uppercase tracking-wider">
-              À propos de E-GO
-            </p>
-            <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
-              Location-vente d&apos;iPhone{" "}
-              <span className="text-primary">structurée et accessible</span>
+      {/* HERO */}
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5" />
+        <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
+
+        <div className="relative max-w-7xl mx-auto px-6 py-24 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <div className="inline-flex items-center gap-2 bg-surface-light border border-border rounded-full px-4 py-2 mb-8 shadow-sm">
+              <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+              <span className="text-sm text-muted">À propos de E-GO</span>
+            </div>
+
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
+              Rendre la technologie{" "}
+              <span className="text-primary">accessible</span> à tous.
             </h1>
-            <p className="mt-6 text-lg text-muted leading-relaxed">
+
+            <p className="mt-6 text-lg text-muted max-w-lg leading-relaxed">
               E-GO est une entreprise spécialisée dans la location-vente d&apos;iPhone, proposant un modèle de paiement structuré et accessible adapté aux réalités économiques locales.
             </p>
-            <p className="mt-4 text-muted leading-relaxed">
-              Créée pour répondre à une forte demande en smartphones haut de gamme, E-GO développe une solution innovante permettant aux clients d&apos;accéder immédiatement à un iPhone tout en réglant le montant de manière progressive selon un échéancier défini.
-            </p>
-            <p className="mt-4 text-muted leading-relaxed">
-              L&apos;entreprise agit comme un intermédiaire organisé entre fournisseurs partenaires et clients finaux, en assurant :
-            </p>
-            <ul className="mt-4 space-y-2">
-              {[
-                "La sélection et la vérification des appareils",
-                "La formalisation des contrats",
-                "La gestion administrative et financière des paiements",
-                "Le suivi rigoureux des engagements",
-                "L'accompagnement personnalisé des clients",
-              ].map((item) => (
-                <li key={item} className="flex items-center gap-2 text-muted">
-                  <Check className="w-5 h-5 text-primary shrink-0" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <p className="mt-6 text-muted leading-relaxed">
-              Notre modèle repose sur un cadre structuré, sécurisé et transparent, garantissant à la fois la protection des vendeurs partenaires et la sérénité des acheteurs.
-            </p>
-            <p className="mt-4 text-muted leading-relaxed">
-              E-GO s&apos;inscrit dans une dynamique de modernisation de l&apos;accès à la technologie en Afrique, en proposant une alternative fiable aux paiements informels et aux systèmes de crédit non encadrés.
-            </p>
-            <p className="mt-4 text-muted leading-relaxed">
-              À travers une approche professionnelle et responsable, nous contribuons à faciliter l&apos;inclusion technologique tout en favorisant un commerce plus organisé et sécurisé dans le secteur des smartphones.
-            </p>
+
+            {/* Image mobile */}
+            <div className="flex lg:hidden items-center justify-center mt-10">
+              <div className="relative w-full max-w-[340px] aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/a-propos-hero.png"
+                  alt="Conseiller E-GO en magasin présentant un smartphone à un client"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="hidden lg:flex items-center justify-center">
+            <div className="relative">
+              <div className="relative w-[480px] h-[360px] rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/a-propos-hero.png"
+                  alt="Conseiller E-GO en magasin présentant un smartphone à un client"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <div className="absolute -bottom-4 -right-4 w-72 h-72 bg-primary/10 rounded-full blur-2xl -z-10" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* À PROPOS - CONTENU PRINCIPAL */}
+      <section className="py-24 bg-surface">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+            {/* Texte principal */}
+            <div className="lg:col-span-2 space-y-6">
+              <div className="bg-surface-light border border-border rounded-2xl p-8 md:p-10">
+                <p className="text-muted leading-relaxed">
+                  Créée pour répondre à une forte demande en smartphones haut de gamme, E-GO développe une solution innovante permettant aux clients d&apos;accéder immédiatement à un iPhone tout en réglant le montant de manière progressive selon un échéancier défini.
+                </p>
+              </div>
+              <p className="text-foreground font-medium">
+                L&apos;entreprise agit comme un intermédiaire organisé entre fournisseurs partenaires et clients finaux, en assurant :
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {[
+                  "La sélection et la vérification des appareils",
+                  "La formalisation des contrats",
+                  "La gestion administrative et financière des paiements",
+                  "Le suivi rigoureux des engagements",
+                  "L'accompagnement personnalisé des clients",
+                ].map((item) => (
+                  <div
+                    key={item}
+                    className="flex items-start gap-3 p-4 bg-surface-light border border-border rounded-xl hover:border-primary/20 transition-colors"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                      <Check className="w-4 h-4 text-primary" />
+                    </div>
+                    <span className="text-sm text-muted leading-relaxed">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Encadré citation */}
+            <div className="lg:col-span-1">
+              <div className="sticky top-24 bg-primary/5 border border-primary/20 rounded-2xl p-8">
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                  <Zap className="w-6 h-6 text-primary" />
+                </div>
+                <p className="text-foreground font-semibold mb-4 leading-relaxed">
+                  Notre modèle repose sur un cadre structuré, sécurisé et transparent.
+                </p>
+                <p className="text-sm text-muted leading-relaxed">
+                  Protection des vendeurs partenaires et sérénité des acheteurs.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-surface-light border border-border rounded-2xl p-6 md:p-8">
+              <p className="text-muted leading-relaxed">
+                E-GO s&apos;inscrit dans une dynamique de modernisation de l&apos;accès à la technologie en Afrique, en proposant une alternative fiable aux paiements informels et aux systèmes de crédit non encadrés.
+              </p>
+            </div>
+            <div className="bg-surface-light border border-border rounded-2xl p-6 md:p-8">
+              <p className="text-muted leading-relaxed">
+                À travers une approche professionnelle et responsable, nous contribuons à faciliter l&apos;inclusion technologique tout en favorisant un commerce plus organisé et sécurisé dans le secteur des smartphones.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* QUI SOMMES-NOUS */}
-      <section className="py-24 bg-surface">
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-sm font-semibold text-primary mb-2 uppercase tracking-wider">
-            Notre identité
-          </p>
-          <h2 className="text-3xl sm:text-4xl font-bold mb-8">
-            1. Qui sommes-nous ?
-          </h2>
-          <div className="max-w-3xl space-y-6 text-muted leading-relaxed">
-            <p>
-              E-GO est une entreprise innovante spécialisée dans la location-vente d&apos;iPhone en Afrique.
-            </p>
-            <p>
-              Nous sommes nés d&apos;un constat simple : de nombreuses personnes souhaitent utiliser des iPhones récents, mais rencontrent des difficultés à effectuer un paiement comptant. E-GO apporte une solution moderne, structurée et sécurisée à cette réalité.
-            </p>
-            <p>
-              Notre rôle ne se limite pas à fournir un téléphone. Nous mettons en place un véritable système d&apos;accompagnement financier permettant à chaque client d&apos;accéder à la technologie premium tout en respectant sa capacité de paiement.
-            </p>
-            <p>
-              Nous sélectionnons des appareils authentiques, soigneusement testés et vérifiés afin de garantir :
-            </p>
-            <ul className="space-y-2">
-              {["La qualité", "La performance", "La durabilité", "La sécurité d'utilisation"].map((item) => (
-                <li key={item} className="flex items-center gap-2">
-                  <Check className="w-5 h-5 text-primary shrink-0" />
-                  {item}
-                </li>
-              ))}
-            </ul>
+          <div className="flex flex-col md:flex-row md:items-end gap-6 mb-12">
+            <div>
+              <p className="text-sm font-semibold text-primary mb-2 uppercase tracking-wider">
+                Notre identité
+              </p>
+              <h2 className="text-3xl sm:text-4xl font-bold">
+                Qui sommes-nous ?
+              </h2>
+            </div>
+            <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0">
+              <Target className="w-7 h-7 text-primary" />
+            </div>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="space-y-6">
+              <div className="bg-surface-light border border-border rounded-2xl p-8">
+                <p className="text-muted leading-relaxed mb-4">
+                  E-GO est une entreprise innovante spécialisée dans la location-vente d&apos;iPhone en Afrique.
+                </p>
+                <p className="text-muted leading-relaxed">
+                  Nous sommes nés d&apos;un constat simple : de nombreuses personnes souhaitent utiliser des iPhones récents, mais rencontrent des difficultés à effectuer un paiement comptant. E-GO apporte une solution moderne, structurée et sécurisée à cette réalité.
+                </p>
+              </div>
+              <div className="bg-surface-light border border-border rounded-2xl p-8">
+                <p className="text-muted leading-relaxed">
+                  Notre rôle ne se limite pas à fournir un téléphone. Nous mettons en place un véritable système d&apos;accompagnement financier permettant à chaque client d&apos;accéder à la technologie premium tout en respectant sa capacité de paiement.
+                </p>
+              </div>
+            </div>
+            <div>
+              <p className="text-foreground font-semibold mb-6">
+                Nous sélectionnons des appareils authentiques, soigneusement testés et vérifiés afin de garantir :
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {["La qualité", "La performance", "La durabilité", "La sécurité d'utilisation"].map((item) => (
+                  <div
+                    key={item}
+                    className="flex items-center gap-3 p-5 bg-primary/5 border border-primary/10 rounded-xl"
+                  >
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                      <Check className="w-5 h-5 text-primary" />
+                    </div>
+                    <span className="font-medium text-foreground">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* 3 PILIERS */}
-      <section className="py-24">
+      <section className="py-24 bg-surface">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-12">
             <p className="text-sm font-semibold text-primary mb-2 uppercase tracking-wider">
               Notre fonctionnement
             </p>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+              Trois piliers fondamentaux
+            </h2>
             <p className="text-muted max-w-2xl">
               Notre fonctionnement repose sur trois piliers fondamentaux :
             </p>
@@ -167,7 +262,7 @@ export default function APropos() {
       </section>
 
       {/* CHIFFRES */}
-      <section className="py-24 bg-surface">
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
@@ -189,7 +284,7 @@ export default function APropos() {
       </section>
 
       {/* CTA */}
-      <section className="py-24">
+      <section className="py-24 bg-surface">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-8">
             Prêt à nous rejoindre ?
