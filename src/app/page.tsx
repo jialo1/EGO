@@ -15,6 +15,10 @@ import {
   Lock,
   Eye,
   Handshake,
+  CreditCard,
+  Package,
+  CheckCircle2,
+  Zap,
 } from "lucide-react";
 import ProductCatalog from "@/components/ProductCatalog";
 
@@ -62,17 +66,17 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row gap-4 mt-10">
               <Link
-                href="#catalogue"
+                href="#comment-ca-marche"
                 className="inline-flex items-center justify-center gap-2 bg-accent text-white font-semibold px-8 py-4 rounded-xl hover:bg-accent-dark transition-all hover:scale-[1.02] shadow-md"
               >
                 <Smartphone className="w-5 h-5" />
-                Voir les articles
+                Notre mode de fonctionnement
               </Link>
               <Link
                 href="/echeanciers"
                 className="inline-flex items-center justify-center gap-2 bg-primary text-white font-semibold px-8 py-4 rounded-xl hover:bg-primary-dark transition-all hover:scale-[1.02] shadow-md"
               >
-                Commencer ma demande
+                Nos échéanciers
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
@@ -113,47 +117,100 @@ export default function Home() {
       {/* CATALOGUE PRODUITS */}
       <ProductCatalog />
 
-      {/* COMMENT ÇA MARCHE */}
-      <section className="py-24 bg-surface">
+      {/* MODE DE FONCTIONNEMENT */}
+      <section id="comment-ca-marche" className="py-24 bg-surface">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <p className="text-sm font-semibold text-primary mb-2 uppercase tracking-wider">Process</p>
-            <h2 className="text-3xl sm:text-4xl font-bold">Comment ça marche ?</h2>
+          <div className="text-center mb-16">
+            <p className="text-sm font-semibold text-primary mb-2 uppercase tracking-wider">E-GO</p>
+            <h2 className="text-3xl sm:text-4xl font-bold">Mode de fonctionnement</h2>
+            <p className="mt-4 text-muted max-w-2xl mx-auto">
+              De l&apos;acompte à la propriété : 7 étapes simples et transparentes.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {[
               {
-                step: "01",
-                icon: Smartphone,
-                title: "Choisissez votre modèle",
-                desc: "iPhone, iPad ou Watch. Mode de paiement adapté à votre rythme.",
+                step: 1,
+                icon: Zap,
+                title: "Principe du service",
+                content: "E-GO propose un système innovant de location-vente d'iPhone permettant aux clients d'acquérir un smartphone haut de gamme sans payer la totalité du prix immédiatement. Notre modèle repose sur un paiement initial suivi de paiements échelonnés sur une période déterminée.",
+                list: null,
               },
               {
-                step: "02",
+                step: 2,
+                icon: CreditCard,
+                title: "L'acompte",
+                content: "Pour accéder au service, le client doit verser un acompte minimum de 40 % du prix du téléphone choisi.",
+                list: ["Sécuriser la transaction", "Confirmer l'engagement du client", "Réduire le montant restant à payer"],
+              },
+              {
+                step: 3,
                 icon: FileText,
-                title: "Fournissez vos documents",
-                desc: "CNI, justificatif de revenu. Vérification et contrat.",
+                title: "Signature du contrat",
+                content: "Après le paiement de l'acompte, un contrat officiel est établi entre E-GO et le client.",
+                list: ["Modèle d'iPhone choisi", "Montant total du téléphone", "Acompte payé", "Solde restant", "Durée et modalités de paiement"],
               },
               {
-                step: "03",
-                icon: Check,
-                title: "Recevez & payez",
-                desc: "Livraison immédiate. Suivi via votre échéancier.",
+                step: 4,
+                icon: Users,
+                title: "Étude du statut",
+                content: "Avant de fixer l'échéancier, E-GO analyse le statut du client afin de proposer un plan de paiement adapté.",
+                list: ["Salarié", "Commerçant", "Entrepreneur", "Étudiant", "Travailleur indépendant"],
               },
-            ].map(({ step, icon: Icon, title, desc }) => (
+              {
+                step: 5,
+                icon: Calendar,
+                title: "Mise en place de l'échéancier",
+                content: "Après validation du contrat, un échéancier personnalisé est établi. Les paiements peuvent être hebdomadaires, bi-hebdomadaires ou mensuels. La durée peut aller jusqu'à 1 mois ou plus selon l'accord établi.",
+                list: null,
+              },
+              {
+                step: 6,
+                icon: Package,
+                title: "Remise du téléphone",
+                content: "Une fois l'acompte versé et le contrat signé, le client reçoit immédiatement son iPhone et peut l'utiliser tout en continuant de payer le reste selon l'échéancier défini.",
+                list: null,
+              },
+              {
+                step: 7,
+                icon: CheckCircle2,
+                title: "Fin du contrat",
+                content: "Lorsque le client a payé la totalité du montant, le téléphone devient sa propriété définitive. Le contrat est alors considéré comme entièrement exécuté et clôturé.",
+                list: null,
+                highlight: true,
+              },
+            ].map(({ step, icon: Icon, title, content, list, highlight }) => (
               <div
                 key={step}
-                className="relative group bg-surface-light border border-border rounded-2xl p-8 hover:border-primary/30 hover:shadow-md transition-all"
+                className={`rounded-2xl p-6 border transition-all hover:shadow-md ${
+                  highlight
+                    ? "lg:col-span-2 bg-primary/5 border-primary/30"
+                    : "bg-surface-light border-border hover:border-primary/20"
+                }`}
               >
-                <span className="text-5xl font-bold text-foreground/5 absolute top-4 right-6">
-                  {step}
-                </span>
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                  <Icon className="w-6 h-6 text-primary" />
+                <div className="flex items-start gap-4">
+                  <div className="relative flex shrink-0 items-center justify-center w-12 h-12 rounded-xl bg-primary/10">
+                    <Icon className="w-6 h-6 text-primary" />
+                    <span className="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center">
+                      {step}
+                    </span>
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-lg font-bold mb-2">{title}</h3>
+                    <p className="text-sm text-muted leading-relaxed">{content}</p>
+                    {list && (
+                      <ul className="mt-3 flex flex-wrap gap-2">
+                        {list.map((item) => (
+                          <li key={item} className="inline-flex items-center gap-1.5 text-xs text-muted bg-surface px-2.5 py-1 rounded-full">
+                            <Check className="w-3 h-3 text-primary shrink-0" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{title}</h3>
-                <p className="text-muted leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>

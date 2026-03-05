@@ -11,11 +11,11 @@ export default function Footer() {
           <div className="md:col-span-1">
             <Link href="/" className="inline-block mb-4">
               <Image
-                src="/logo.png"
+                src="/icon.jpeg"
                 alt="E-GO"
                 width={120}
                 height={48}
-                className="h-12 w-auto"
+                className="h-12 w-auto object-contain"
               />
             </Link>
             <p className="text-sm text-white/60 leading-relaxed">

@@ -21,11 +21,11 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center group hover:opacity-90 transition-opacity">
           <Image
-            src="/logo.png"
+            src="/icon.jpeg"
             alt="E-GO"
-            width={100}
-            height={40}
-            className="h-10 w-auto"
+            width={120}
+            height={48}
+            className="h-10 w-auto object-contain"
             priority
           />
         </Link>
