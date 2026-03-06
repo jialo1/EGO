@@ -78,6 +78,27 @@ export default function Footer() {
                 <Phone className="w-4 h-4 shrink-0" />
                 <span>Dakar : +221 33 82 18 686</span>
               </a>
+              <a
+                href="tel:+2330200520265"
+                className="flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors"
+              >
+                <Phone className="w-4 h-4 shrink-0" />
+                <span>Accra : +233 02 005 202 65</span>
+              </a>
+              <a
+                href="tel:+23407076570391"
+                className="flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors"
+              >
+                <Phone className="w-4 h-4 shrink-0" />
+                <span>Lagos : +234 070 765 703 91</span>
+              </a>
+              <a
+                href="tel:+2540710773333"
+                className="flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors"
+              >
+                <Phone className="w-4 h-4 shrink-0" />
+                <span>Nairobi : +254 071 077 3333</span>
+              </a>
               <p className="flex items-center gap-2 text-sm text-white/60">
                 <MapPin className="w-4 h-4 shrink-0" />
                 Abidjan, Côte d&apos;Ivoire
