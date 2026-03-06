@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="md:col-span-1">
             <Link href="/" className="inline-block mb-4">
               <Image
-                src="/icon.jpeg"
+                src="/logo.png"
                 alt="E-GO"
                 width={120}
                 height={48}
@@ -61,15 +61,22 @@ export default function Footer() {
                 href="mailto:contact@e-go.africa"
                 className="flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors"
               >
-                <Mail className="w-4 h-4" />
+                <Mail className="w-4 h-4 shrink-0" />
                 contact@e-go.africa
               </a>
               <a
-                href="tel:+2250000000000"
+                href="tel:+2252721305864"
                 className="flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors"
               >
-                <Phone className="w-4 h-4" />
-                +225 00 00 000 000
+                <Phone className="w-4 h-4 shrink-0" />
+                <span>Abidjan : +225 27 21 30 58 64</span>
+              </a>
+              <a
+                href="tel:+221338218686"
+                className="flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors"
+              >
+                <Phone className="w-4 h-4 shrink-0" />
+                <span>Dakar : +221 33 82 18 686</span>
               </a>
               <p className="flex items-center gap-2 text-sm text-white/60">
                 <MapPin className="w-4 h-4 shrink-0" />

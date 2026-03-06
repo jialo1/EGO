@@ -18,14 +18,14 @@ export default function Navigation() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center group hover:opacity-90 transition-opacity">
           <Image
             src="/icon.jpeg"
             alt="E-GO"
-            width={120}
-            height={48}
-            className="h-10 w-auto object-contain"
+            width={150}
+            height={60}
+            className="h-14 w-auto object-contain"
             priority
           />
         </Link>

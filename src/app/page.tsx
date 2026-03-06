@@ -20,8 +20,6 @@ import {
   CheckCircle2,
   Zap,
 } from "lucide-react";
-import ProductCatalog from "@/components/ProductCatalog";
-
 export default function Home() {
   return (
     <>
@@ -113,9 +111,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* CATALOGUE PRODUITS */}
-      <ProductCatalog />
 
       {/* MODE DE FONCTIONNEMENT */}
       <section id="comment-ca-marche" className="py-24 bg-surface">
@@ -229,27 +224,34 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 icon: Clock,
-                title: "Hebdomadaire",
-                target: "Commerçants, indépendants",
-                duration: "4 à 8 semaines",
+                title: "Profil Standard",
+                target: "Commerçants, entrepreneurs, indépendants",
+                duration: "4 à 24 semaines",
                 highlight: false,
               },
               {
                 icon: Calendar,
-                title: "Quinzaine",
-                target: "Travailleurs réguliers",
-                duration: "6 mois payable chaque deux semaines",
+                title: "Paiement par quinzaine",
+                target: "Option du profil standard",
+                duration: "6 mois",
                 highlight: true,
               },
               {
+                icon: Users,
+                title: "Profil Salarié",
+                target: "Salaire mensuel stable",
+                duration: "3 mois",
+                highlight: false,
+              },
+              {
                 icon: TrendingUp,
-                title: "Mensuel",
-                target: "Salariés & fonctionnaires",
-                duration: "3 à 6 mois",
+                title: "Profil Professionnel",
+                target: "Fonctionnaires, professionnels",
+                duration: "6 mois",
                 highlight: false,
               },
             ].map(({ icon: Icon, title, target, duration, highlight }) => (

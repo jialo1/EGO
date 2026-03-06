@@ -17,6 +17,7 @@ const locations = [
       "Siège principal et centre d'opérations.",
     isHQ: true,
     active: true,
+    phones: ["+225 27 21 30 58 64", "+225 27 21 30 55 33", "+225 01 40 61 55 74"],
   },
   {
     country: "Sénégal",
@@ -27,36 +28,62 @@ const locations = [
       "Présence active à Dakar.",
     isHQ: false,
     active: true,
+    phones: ["+221 33 82 18 686"],
   },
   {
     country: "Ghana",
     flag: "🇬🇭",
     city: "Accra",
-    status: "En expansion",
+    status: "Opérationnel",
     description:
-      "En expansion.",
+      "Présence active à Accra.",
     isHQ: false,
-    active: false,
+    active: true,
+    phones: ["+233 02 005 202 65"],
   },
   {
     country: "Nigeria",
     flag: "🇳🇬",
     city: "Lagos",
-    status: "En expansion",
+    status: "Opérationnel",
     description:
-      "En expansion.",
+      "Présence active à Lagos.",
     isHQ: false,
-    active: false,
+    active: true,
+    phones: ["+234 070 765 703 91"],
   },
   {
     country: "Kenya",
     flag: "🇰🇪",
     city: "Nairobi",
+    status: "Opérationnel",
+    description:
+      "Présence active à Nairobi.",
+    isHQ: false,
+    active: true,
+    phones: ["+254 071 077 3333"],
+  },
+  {
+    country: "Togo",
+    flag: "🇹🇬",
+    city: "Lomé",
     status: "En expansion",
     description:
       "En expansion.",
     isHQ: false,
     active: false,
+    phones: [] as string[],
+  },
+  {
+    country: "Cameroun",
+    flag: "🇨🇲",
+    city: "Douala",
+    status: "En expansion",
+    description:
+      "En expansion.",
+    isHQ: false,
+    active: false,
+    phones: [] as string[],
   },
 ];
 
@@ -76,7 +103,7 @@ export default function Contact() {
               Contact & Localisations
             </h1>
             <p className="text-center text-muted max-w-lg mx-auto mb-8">
-              Siège à Abidjan. Présents à Dakar. Expansion en cours en Afrique.
+              Siège à Abidjan. Présents à Dakar, Accra, Lagos et Nairobi. Expansion vers Lomé et Douala.
             </p>
 
             <div className="flex flex-wrap justify-center gap-4">
@@ -130,23 +157,33 @@ export default function Contact() {
                 </div>
                 <h3 className="text-xl font-bold mb-1">{loc.city}</h3>
                 <p className="text-sm text-muted mb-4">{loc.country}</p>
-                <p className="text-sm text-muted leading-relaxed">
+                <p className="text-sm text-muted leading-relaxed mb-4">
                   {loc.description}
                 </p>
-                {loc.isHQ && (
-                  <div className="mt-6 pt-6 border-t border-border space-y-2">
-                    <div className="flex items-center gap-2 text-sm text-muted">
-                      <Building className="w-4 h-4" />
-                      Siège social E-GO
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-muted">
-                      <MapPin className="w-4 h-4" />
-                      Abidjan, Côte d&apos;Ivoire
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-muted">
-                      <Phone className="w-4 h-4" />
-                      +225 00 00 000 000
-                    </div>
+                {loc.phones && loc.phones.length > 0 && (
+                  <div className="mt-4 pt-4 border-t border-border space-y-2">
+                    {loc.isHQ && (
+                      <>
+                        <div className="flex items-center gap-2 text-sm text-muted">
+                          <Building className="w-4 h-4 shrink-0" />
+                          Siège social E-GO
+                        </div>
+                        <div className="flex items-center gap-2 text-sm text-muted">
+                          <MapPin className="w-4 h-4 shrink-0" />
+                          Abidjan, Côte d&apos;Ivoire
+                        </div>
+                      </>
+                    )}
+                    {loc.phones.map((phone) => (
+                      <a
+                        key={phone}
+                        href={`tel:${phone.replace(/\s/g, "")}`}
+                        className="flex items-center gap-2 text-sm text-muted hover:text-primary transition-colors"
+                      >
+                        <Phone className="w-4 h-4 shrink-0" />
+                        {phone}
+                      </a>
+                    ))}
                   </div>
                 )}
               </div>
