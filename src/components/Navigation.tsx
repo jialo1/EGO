@@ -1,13 +1,15 @@
 "use client";
 
-import Link from "next/link";
+import { Link, usePathname } from "@/i18n/routing";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { navLinks } from "@/lib/navigation";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navigation() {
+  const t = useTranslations("common.nav");
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
@@ -41,15 +43,18 @@ export default function Navigation() {
                   : "text-muted hover:text-foreground"
               }`}
             >
-              {link.label}
+              {t(link.labelKey)}
             </Link>
           ))}
           <Link
             href="/echeanciers"
             className="bg-primary text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-primary-dark transition-colors"
           >
-            Commencer
+            {t("start")}
           </Link>
+          <div className="hidden md:block">
+            <LanguageSwitcher />
+          </div>
         </div>
 
         <button
@@ -74,7 +79,7 @@ export default function Navigation() {
                   : "text-muted hover:text-foreground"
               }`}
             >
-              {link.label}
+              {t(link.labelKey)}
             </Link>
           ))}
           <Link
@@ -82,8 +87,11 @@ export default function Navigation() {
             onClick={() => setOpen(false)}
             className="block bg-primary text-white text-center font-semibold px-5 py-3 rounded-lg hover:bg-primary-dark transition-colors"
           >
-            Commencer
+            {t("start")}
           </Link>
+          <div className="pt-2 border-t border-border">
+            <LanguageSwitcher />
+          </div>
         </div>
       )}
     </nav>

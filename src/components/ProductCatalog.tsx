@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Check, Star } from "lucide-react";
+import { ArrowRight, Star } from "lucide-react";
 import { products, categories, type Product } from "@/lib/products";
 
 function ProductCard({ product }: { product: Product }) {

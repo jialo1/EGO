@@ -1,0 +1,244 @@
+{
+  "common": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "schedules": "Payment plans",
+      "articles": "Articles",
+      "contact": "Contact",
+      "start": "Get started"
+    },
+    "footer": {
+      "tagline": "Rental-purchase smartphones in Africa. Pay progressively.",
+      "navigation": "Navigation",
+      "services": "Services",
+      "contact": "Contact",
+      "rights": "All rights reserved.",
+      "terms": "Terms and conditions",
+      "privacy": "Privacy policy",
+      "servicesList": ["Rental-purchase", "Flexible payment", "Trade-in & exchange", "Tracking & documents"]
+    },
+    "profile": "Profile",
+    "duration": "Duration",
+    "learnMore": "Learn more",
+    "backToHome": "Back to home"
+  },
+  "home": {
+    "hero": {
+      "badge": "Secure rental-purchase in Africa",
+      "title": "Access the iPhone of your choice more easily.",
+      "subtitle": "Buy now and pay later.",
+      "howItWorks": "How it works",
+      "schedules": "Our payment plans",
+      "officialContract": "Official contract",
+      "realtimeTracking": "Real-time tracking",
+      "clearSchedule": "Clear payment schedule"
+    },
+    "howItWorks": {
+      "eyebrow": "E-GO",
+      "title": "How it works",
+      "subtitle": "From down payment to ownership: 7 simple and transparent steps.",
+      "steps": {
+        "1": {
+          "title": "Service principle",
+          "content": "E-GO offers an innovative iPhone rental-purchase system that allows customers to acquire a premium smartphone without paying the full price upfront. Our model is based on an initial payment followed by staggered payments over a set period."
+        },
+        "2": {
+          "title": "The down payment",
+          "content": "To access the service, the customer must pay a minimum down payment of 40% of the chosen phone's price.",
+          "list": ["Secure the transaction", "Confirm customer commitment", "Reduce the remaining amount to pay"]
+        },
+        "3": {
+          "title": "Contract signing",
+          "content": "After payment of the down payment, an official contract is established between E-GO and the customer.",
+          "list": ["Chosen iPhone model", "Total phone amount", "Paid down payment", "Remaining balance", "Duration and payment terms"]
+        },
+        "4": {
+          "title": "Status assessment",
+          "content": "Before setting the payment schedule, E-GO analyzes the customer's status to propose an adapted payment plan.",
+          "list": ["Employee", "Merchant", "Entrepreneur", "Student", "Self-employed"]
+        },
+        "5": {
+          "title": "Setting up the schedule",
+          "content": "After contract validation, a personalized payment schedule is established. Payments can be weekly, bi-weekly, or monthly. The duration can be up to 1 month or more depending on the agreement."
+        },
+        "6": {
+          "title": "Phone delivery",
+          "content": "Once the down payment is made and the contract signed, the customer immediately receives their iPhone and can use it while continuing to pay the remainder according to the defined schedule."
+        },
+        "7": {
+          "title": "End of contract",
+          "content": "When the customer has paid the full amount, the phone becomes their permanent property. The contract is then considered fully executed and closed."
+        }
+      }
+    },
+    "schedules": {
+      "eyebrow": "Flexibility",
+      "title": "A payment plan adapted to your pace",
+      "standard": "Standard Profile",
+      "standardTarget": "Merchants, entrepreneurs, self-employed",
+      "fortnight": "Bi-weekly payment",
+      "fortnightTarget": "Standard profile option",
+      "employee": "Employee Profile",
+      "employeeTarget": "Stable monthly salary",
+      "professional": "Professional Profile",
+      "professionalTarget": "Civil servants, professionals",
+      "weeks4to24": "4 to 24 weeks",
+      "6months": "6 months",
+      "3months": "3 months"
+    },
+    "why": {
+      "eyebrow": "Benefits",
+      "title": "Why E-GO ?",
+      "legal": "Legal security",
+      "legalDesc": "Official contract, legal framework.",
+      "process": "Structured process",
+      "processDesc": "Document verification, rigorous tracking.",
+      "trust": "Trust",
+      "trustDesc": "Transparency, no hidden fees.",
+      "accessible": "Accessible to all",
+      "accessibleDesc": "A plan for every profile."
+    },
+    "security": {
+      "eyebrow": "Security & Contract",
+      "title": "Professional framework,",
+      "title2": "not informal credit.",
+      "desc": "Official contract, document verification, clear payment schedule.",
+      "contractSign": "Contract signing",
+      "contractSignDesc": "Official contract before any delivery.",
+      "docCheck": "Document verification",
+      "docCheckDesc": "ID, pay slips, employer certificate.",
+      "transparentTracking": "Transparent tracking",
+      "transparentTrackingDesc": "Schedule, reminders, history.",
+      "dataProtection": "Data protection",
+      "dataProtectionDesc": "Secure and confidential information."
+    },
+    "testimonials": {
+      "1": { "name": "Aminata K.", "role": "Merchant, Abidjan", "text": "My iPhone by paying every week. Clear and professional process." },
+      "2": { "name": "Moussa D.", "role": "Civil servant, Dakar", "text": "Monthly payment matches my salary. The contract reassured me." },
+      "3": { "name": "Fatou S.", "role": "Entrepreneur, Abidjan", "text": "Transparency, no hidden fees. I recommend!" },
+      "eyebrow": "Testimonials",
+      "title": "They trust us"
+    },
+    "cta": {
+      "title": "Ready to get started?",
+      "subtitle": "Choose your model and start your application.",
+      "startRequest": "Start my application",
+      "viewServices": "View services"
+    }
+  },
+  "about": {
+    "badge": "About E-GO",
+    "title": "Making technology",
+    "titleHighlight": "accessible",
+    "titleSuffix": "to everyone.",
+    "subtitle": "E-GO is a company specialized in iPhone rental-purchase, offering a structured and accessible payment model adapted to local economic realities.",
+    "cta": "Ready to join us?",
+    "discoverServices": "Discover our services",
+    "roleItems": ["Device selection and verification", "Contract formalization", "Administrative and financial payment management", "Rigorous commitment tracking", "Personalized client support"],
+    "quote1": "Our model is based on a structured, secure and transparent framework.",
+    "quote2": "Protection for partner sellers and peace of mind for buyers.",
+    "parag1": "Created to meet strong demand for premium smartphones, E-GO has developed an innovative solution that allows customers to immediately access an iPhone while paying the amount progressively according to a defined schedule.",
+    "roleIntro": "The company acts as an organized intermediary between partner suppliers and end customers, ensuring:",
+    "parag2": "E-GO is part of a dynamic of modernizing access to technology in Africa, offering a reliable alternative to informal payments and unregulated credit systems.",
+    "parag3": "Through a professional and responsible approach, we help facilitate technological inclusion while promoting more organized and secure commerce in the smartphone sector.",
+    "identity": "Our identity",
+    "whoWeAre": "Who are we?",
+    "about1": "E-GO is an innovative company specialized in iPhone rental-purchase in Africa.",
+    "about2": "We were born from a simple observation: many people want to use recent iPhones but face difficulties making a lump sum payment. E-GO brings a modern, structured and secure solution to this reality.",
+    "about3": "Our role is not limited to providing a phone. We implement a real financial support system allowing each customer to access premium technology while respecting their payment capacity.",
+    "guaranteeIntro": "We select authentic devices, carefully tested and verified to guarantee:",
+    "guarantees": ["Quality", "Performance", "Durability", "Usage safety"],
+    "pillarsEyebrow": "Our approach",
+    "pillarsTitle": "Three fundamental pillars",
+    "pillarsSubtitle": "Our approach is based on three fundamental pillars:",
+    "pillar1Title": "Transparency",
+    "pillar1Desc": "Clear conditions, precise schedules and structured tracking.",
+    "pillar2Title": "Flexibility",
+    "pillar2Desc": "Payment terms adapted to varied profiles: merchants, self-employed, employees and civil servants.",
+    "pillar3Title": "Trust",
+    "pillar3Desc": "A lasting professional relationship with our customers and partner sellers.",
+    "positioning1": "E-GO positions itself as a structured intermediary between suppliers and customers, ensuring administrative management, payment tracking and personalized support.",
+    "positioning2": "We don't just sell a phone: we facilitate access to a modern, accessible and responsible technological experience.",
+    "stats1": "Clients supported",
+    "stats2": "Smartphones delivered",
+    "stats3": "Countries covered",
+    "stats4": "Satisfaction rate"
+  },
+  "services": {
+    "badge": "Our services",
+    "title": "Tailored solutions",
+    "titleHighlight": "for you",
+    "titleSuffix": "to access your smartphone.",
+    "subtitle": "Rental-purchase, flexible payment, trade-in and tracking. A service adapted to every profile.",
+    "cta": "Find the offer that suits you",
+    "viewSchedules": "View payment plans",
+    "rentalTitle": "Rental-purchase",
+    "rentalDesc": "iPhone immediately. Payment over 1 to 6 months. Official contract.",
+    "rentalItems": ["1 to 6 months", "Signed contract", "Immediate delivery", "Real-time tracking"],
+    "flexibleTitle": "Flexible payment",
+    "flexibleDesc": "A pace adapted to your income.",
+    "flexibleOptions": [{"title": "Weekly", "desc": "Merchants, self-employed"}, {"title": "Bi-weekly", "desc": "Regular workers"}, {"title": "Monthly", "desc": "Employees, civil servants"}],
+    "tradeTitle": "Trade-in & exchange",
+    "tradeDesc": "Old smartphone? Exchange it. Value deducted from the payment schedule.",
+    "tradeItems": ["Free evaluation", "Reduction on schedule", "Wide range accepted"],
+    "trackingTitle": "Tracking & official documents",
+    "trackingDesc": "Contract, schedule, receipts, certificates. Everything is traceable.",
+    "trackingItems": ["Rental-purchase contract", "Detailed payment schedule", "Payment receipt at each due date", "Ownership certificate at the end"]
+  },
+  "schedules": {
+    "badge": "E-GO",
+    "title": "Payment",
+    "titleHighlight": "plans",
+    "subtitle": "Several profiles adapted to your financial capacity. Each profile is defined according to your status and the chosen iPhone model.",
+    "cta": "Ready to get started?",
+    "ctaSubtitle": "Contact us for your personalized payment plan.",
+    "contactAdvisor": "Contact an advisor",
+    "contactUs": "Contact us",
+    "intro": "To adapt to different customer categories and their financial capacity, E-GO offers several payment schedule profiles. Each profile is defined according to the customer's status and the chosen iPhone model.",
+    "downPayment": "Payments are always made after a minimum down payment of 40% of the phone price.",
+    "forWho": "For whom?",
+    "phonesLabel": "Eligible phones",
+    "durationLabel": "Payment duration",
+    "modalityLabel": "Payment modality",
+    "conclusionTitle": "Conclusion",
+    "conclusion1": "Thanks to its different payment schedule profiles, E-GO offers a flexible and accessible solution allowing each customer to acquire an iPhone while choosing a payment method adapted to their financial situation.",
+    "conclusion2": "E-GO's objective is to facilitate access to premium smartphones while maintaining a structured and secure payment system.",
+    "profiles": {
+      "1": {"title": "Standard Profile", "subtitle": "Weekly payment", "target": "Clients without fixed monthly income", "targets": ["Merchants", "Entrepreneurs", "Self-employed", "Students", "Individuals"], "phones": "iPhone XR up to latest Apple release", "duration": "4 to 24 weeks (1 to 6 months)", "modality": "Payment each week according to the contract schedule"},
+      "2": {"title": "Bi-weekly payment", "subtitle": "Standard profile option", "target": "Certain models", "targets": [], "phones": "iPhone 11 up to latest Apple release", "duration": "6 months", "modality": "12 installments, one payment every two weeks"},
+      "3": {"title": "Standard Employee Profile", "subtitle": "Monthly payment", "target": "Clients with stable monthly salary", "targets": [], "phones": "iPhone 12 Pro up to latest Apple release", "duration": "3 months", "modality": "3 monthly installments, plus initial down payment"},
+      "4": {"title": "Professional Civil Servant Profile", "subtitle": "Premium access", "target": "Civil servants and professionals with strong salary stability", "targets": [], "phones": "iPhone 15 Pro up to latest Apple release", "duration": "6 months", "modality": "6 monthly installments, plus initial down payment"}
+    }
+  },
+  "articles": {
+    "badge": "Blog",
+    "title": "Guides, tips &",
+    "titleHighlight": "news.",
+    "subtitle": "Guides, tips and news on smartphone rental-purchase in Africa. Stay informed with E-GO.",
+    "read": "Read",
+    "readArticle": "Read article",
+    "cta": "Have questions?",
+    "startRequest": "Start my application",
+    "backToArticles": "Back to articles",
+    "prevArticle": "Previous article",
+    "nextArticle": "Next article",
+    "ctaAction": "Ready to take action?",
+    "ctaActionSubtitle": "Discover our payment plans and start your application.",
+    "readTimeSuffix": "read"
+  },
+  "contact": {
+    "title": "Contact & Locations",
+    "subtitle": "Headquarters in Abidjan. Present in Dakar, Accra, Lagos and Nairobi. Expanding to Lomé and Douala.",
+    "headquarters": "HQ",
+    "hqLabel": "E-GO headquarters",
+    "cta": "Are you in one of these cities?",
+    "ctaSubtitle": "Contact us to get started.",
+    "contactUs": "Contact us",
+    "viewSchedules": "View payment plans"
+  },
+  "legal": {
+    "lastUpdate": "Last updated: March 2026"
+  }
+}

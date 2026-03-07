@@ -1,9 +1,16 @@
-import Link from "next/link";
+"use client";
+
+import { Link } from "@/i18n/routing";
 import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { navLinks } from "@/lib/navigation";
+import { locations, hqAddress } from "@/lib/locations";
 
 export default function Footer() {
+  const t = useTranslations("common.footer");
+  const tNav = useTranslations("common.nav");
+
   return (
     <footer className="bg-foreground text-background">
       <div className="max-w-7xl mx-auto px-6 py-16">
@@ -19,12 +26,12 @@ export default function Footer() {
               />
             </Link>
             <p className="text-sm text-white/60 leading-relaxed">
-              Location-vente smartphones en Afrique. Payez progressivement.
+              {t("tagline")}
             </p>
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold mb-4 text-white">Navigation</h4>
+            <h4 className="text-sm font-semibold mb-4 text-white">{t("navigation")}</h4>
             <div className="space-y-3">
               {navLinks.map((link) => (
                 <Link
@@ -32,21 +39,16 @@ export default function Footer() {
                   href={link.href}
                   className="block text-sm text-white/60 hover:text-white transition-colors"
                 >
-                  {link.label}
+                  {tNav(link.labelKey)}
                 </Link>
               ))}
             </div>
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold mb-4 text-white">Services</h4>
+            <h4 className="text-sm font-semibold mb-4 text-white">{t("services")}</h4>
             <div className="space-y-3">
-              {[
-                "Location-vente",
-                "Paiement flexible",
-                "Troc & échange",
-                "Suivi & documents",
-              ].map((service) => (
+              {(t.raw("servicesList") as string[]).map((service) => (
                 <p key={service} className="text-sm text-white/60">
                   {service}
                 </p>
@@ -55,53 +57,45 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold mb-4 text-white">Contact</h4>
+            <h4 className="text-sm font-semibold mb-4 text-white">{t("contact")}</h4>
             <div className="space-y-3">
-              <a
-                href="mailto:contact@e-go.africa"
-                className="flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors"
-              >
-                <Mail className="w-4 h-4 shrink-0" />
-                contact@e-go.africa
-              </a>
-              <a
-                href="tel:+2252721305864"
-                className="flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors"
-              >
-                <Phone className="w-4 h-4 shrink-0" />
-                <span>Abidjan : +225 27 21 30 58 64</span>
-              </a>
-              <a
-                href="tel:+221338218686"
-                className="flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors"
-              >
-                <Phone className="w-4 h-4 shrink-0" />
-                <span>Dakar : +221 33 82 18 686</span>
-              </a>
-              <a
-                href="tel:+2330200520265"
-                className="flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors"
-              >
-                <Phone className="w-4 h-4 shrink-0" />
-                <span>Accra : +233 02 005 202 65</span>
-              </a>
-              <a
-                href="tel:+23407076570391"
-                className="flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors"
-              >
-                <Phone className="w-4 h-4 shrink-0" />
-                <span>Lagos : +234 070 765 703 91</span>
-              </a>
-              <a
-                href="tel:+2540710773333"
-                className="flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors"
-              >
-                <Phone className="w-4 h-4 shrink-0" />
-                <span>Nairobi : +254 071 077 3333</span>
-              </a>
+              {locations
+                .filter((loc) => loc.active)
+                .map((loc) => (
+                  <div key={loc.city} className="space-y-1">
+                    <p className="text-xs text-white/50 font-medium">{loc.city}</p>
+                    {loc.emails && (
+                      <>
+                        <a
+                          href={`mailto:${loc.emails.infos}`}
+                          className="flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors"
+                        >
+                          <Mail className="w-4 h-4 shrink-0" />
+                          {loc.emails.infos}
+                        </a>
+                        <a
+                          href={`mailto:${loc.emails.svap}`}
+                          className="flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors"
+                        >
+                          <Mail className="w-4 h-4 shrink-0" />
+                          {loc.emails.svap}
+                        </a>
+                      </>
+                    )}
+                    {loc.phones.length > 0 && (
+                      <a
+                        href={`tel:${loc.phones[0].replace(/\s/g, "")}`}
+                        className="flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors"
+                      >
+                        <Phone className="w-4 h-4 shrink-0" />
+                        <span>{loc.city} : {loc.phones[0]}</span>
+                      </a>
+                    )}
+                  </div>
+                ))}
               <p className="flex items-center gap-2 text-sm text-white/60">
                 <MapPin className="w-4 h-4 shrink-0" />
-                Abidjan, Côte d&apos;Ivoire
+                {hqAddress}
               </p>
             </div>
           </div>
@@ -109,14 +103,14 @@ export default function Footer() {
 
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white/40">
-            &copy; {new Date().getFullYear()} E-GO. Tous droits réservés.
+            &copy; {new Date().getFullYear()} E-GO. {t("rights")}
           </p>
           <div className="flex gap-6">
-            <Link href="#" className="text-xs text-white/40 hover:text-white transition-colors">
-              Conditions générales
+            <Link href="/conditions-generales" className="text-xs text-white/40 hover:text-white transition-colors">
+              {t("terms")}
             </Link>
-            <Link href="#" className="text-xs text-white/40 hover:text-white transition-colors">
-              Politique de confidentialité
+            <Link href="/politique-confidentialite" className="text-xs text-white/40 hover:text-white transition-colors">
+              {t("privacy")}
             </Link>
           </div>
         </div>

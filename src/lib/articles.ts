@@ -67,7 +67,7 @@ Le choix de l'échéancier est une décision importante. Il doit correspondre à
 
 **Pour qui ?** Commerçants, vendeurs de marché, travailleurs indépendants.
 
-Ce mode est idéal si vous avez des revenus quotidiens ou très réguliers. Les montants sont plus légers et la durée est courte (4 à 8 semaines). Vous devenez propriétaire rapidement.
+Ce mode est idéal si vous avez des revenus quotidiens ou très réguliers. Les montants sont plus légers et la durée est courte (4 à 24 semaines). Vous devenez propriétaire rapidement.
 
 ## Paiement par quinzaine
 
@@ -103,6 +103,7 @@ Dans le secteur de la location-vente en Afrique, beaucoup d'acteurs fonctionnent
 - **Transparence totale** : tous les montants, dates et conditions sont écrits noir sur blanc.
 - **Protection du client** : vos droits sont clairement définis. Pas de changement de conditions en cours de route.
 - **Protection d'E-GO** : le contrat nous permet aussi de maintenir un service de qualité pour tous nos clients.
+- **Données personnelles sécurisées** : avec E-GO, vos données personnelles sont sécurisées et gardées confidentielles. Aucune divulgation de vos données personnelles.
 
 ## Qu'est-ce qui est inclus ?
 
@@ -122,27 +123,26 @@ C'est cette rigueur qui fait la force de notre modèle.
   },
   {
     slug: "ego-expansion-afrique-ouest",
-    title: "E-GO s'étend en Afrique de l'Ouest",
+    title: "E-GO s'étend en Afrique",
     excerpt:
-      "Après Abidjan et Dakar, E-GO prépare son expansion vers Accra, Lagos et Nairobi. Le point sur notre croissance.",
+      "Déjà opérationnel à Dakar, Lagos, Accra et Nairobi, E-GO étend son expansion vers Lomé et Douala.",
     category: "Actualité",
     date: "15 Fév 2026",
     readTime: "3 min",
     image: "🌍",
     content: `
-Depuis notre lancement à Abidjan, E-GO a accompagné plus de 1 000 clients et livré plus de 2 500 smartphones. Aujourd'hui, nous sommes fiers d'annoncer notre plan d'expansion.
+Depuis notre lancement à Abidjan, E-GO a accompagné plus de 1 000 clients et livré plus de 2 500 smartphones. Aujourd'hui, nous sommes fiers de notre présence étendue sur le continent.
 
-## Dakar : déjà opérationnel
+## Déjà opérationnel à Dakar, Lagos, Accra et Nairobi
 
-Notre équipe est active à Dakar depuis plusieurs mois. La communauté sénégalaise a adopté le concept de location-vente avec enthousiasme, confirmant la demande pour ce type de service en Afrique.
+Notre équipe est active à Dakar depuis plusieurs mois. La communauté sénégalaise a adopté le concept de location-vente avec enthousiasme. Nous sommes également présents à Lagos, Accra et Nairobi, où nous confirmons la forte demande pour ce type de service en Afrique.
 
-## Prochaines étapes
+## E-GO étend son expansion vers Lomé et Douala
 
-Nous préparons activement notre entrée sur trois nouveaux marchés :
+E-GO prépare activement son entrée sur deux nouveaux marchés :
 
-- **Accra, Ghana** : un marché dynamique avec une forte pénétration mobile
-- **Lagos, Nigeria** : le plus grand marché africain, avec un potentiel immense
-- **Nairobi, Kenya** : porte d'entrée de l'Afrique de l'Est
+- **Lomé, Togo** : un marché en croissance avec un potentiel important
+- **Douala, Cameroun** : hub économique de la sous-région
 
 ## Notre approche
 

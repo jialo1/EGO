@@ -1,0 +1,244 @@
+{
+  "common": {
+    "nav": {
+      "home": "Accueil",
+      "about": "À propos",
+      "services": "Services",
+      "schedules": "Échéanciers",
+      "articles": "Articles",
+      "contact": "Contact",
+      "start": "Commencer"
+    },
+    "footer": {
+      "tagline": "Location-vente smartphones en Afrique. Payez progressivement.",
+      "navigation": "Navigation",
+      "services": "Services",
+      "contact": "Contact",
+      "rights": "Tous droits réservés.",
+      "terms": "Conditions générales",
+      "privacy": "Politique de confidentialité",
+      "servicesList": ["Location-vente", "Paiement flexible", "Troc & échange", "Suivi & documents"]
+    },
+    "profile": "Profil",
+    "duration": "Durée",
+    "learnMore": "En savoir plus",
+    "backToHome": "Retour à l'accueil"
+  },
+  "home": {
+    "hero": {
+      "badge": "Location-vente sécurisée en Afrique",
+      "title": "Accédez plus facilement à l'iPhone de votre choix.",
+      "subtitle": "Acheter maintenant et payer plus tard.",
+      "howItWorks": "Notre mode de fonctionnement",
+      "schedules": "Nos échéanciers",
+      "officialContract": "Contrat officiel",
+      "realtimeTracking": "Suivi en temps réel",
+      "clearSchedule": "Échéancier clair"
+    },
+    "howItWorks": {
+      "eyebrow": "E-GO",
+      "title": "Mode de fonctionnement",
+      "subtitle": "De l'acompte à la propriété : 7 étapes simples et transparentes.",
+      "steps": {
+        "1": {
+          "title": "Principe du service",
+          "content": "E-GO propose un système innovant de location-vente d'iPhone permettant aux clients d'acquérir un smartphone haut de gamme sans payer la totalité du prix immédiatement. Notre modèle repose sur un paiement initial suivi de paiements échelonnés sur une période déterminée."
+        },
+        "2": {
+          "title": "L'acompte",
+          "content": "Pour accéder au service, le client doit verser un acompte minimum de 40 % du prix du téléphone choisi.",
+          "list": ["Sécuriser la transaction", "Confirmer l'engagement du client", "Réduire le montant restant à payer"]
+        },
+        "3": {
+          "title": "Signature du contrat",
+          "content": "Après le paiement de l'acompte, un contrat officiel est établi entre E-GO et le client.",
+          "list": ["Modèle d'iPhone choisi", "Montant total du téléphone", "Acompte payé", "Solde restant", "Durée et modalités de paiement"]
+        },
+        "4": {
+          "title": "Étude du statut",
+          "content": "Avant de fixer l'échéancier, E-GO analyse le statut du client afin de proposer un plan de paiement adapté.",
+          "list": ["Salarié", "Commerçant", "Entrepreneur", "Étudiant", "Travailleur indépendant"]
+        },
+        "5": {
+          "title": "Mise en place de l'échéancier",
+          "content": "Après validation du contrat, un échéancier personnalisé est établi. Les paiements peuvent être hebdomadaires, bi-hebdomadaires ou mensuels. La durée peut aller jusqu'à 1 mois ou plus selon l'accord établi."
+        },
+        "6": {
+          "title": "Remise du téléphone",
+          "content": "Une fois l'acompte versé et le contrat signé, le client reçoit immédiatement son iPhone et peut l'utiliser tout en continuant de payer le reste selon l'échéancier défini."
+        },
+        "7": {
+          "title": "Fin du contrat",
+          "content": "Lorsque le client a payé la totalité du montant, le téléphone devient sa propriété définitive. Le contrat est alors considéré comme entièrement exécuté et clôturé."
+        }
+      }
+    },
+    "schedules": {
+      "eyebrow": "Flexibilité",
+      "title": "Un échéancier adapté à votre rythme",
+      "standard": "Profil Standard",
+      "standardTarget": "Commerçants, entrepreneurs, indépendants",
+      "fortnight": "Paiement par quinzaine",
+      "fortnightTarget": "Option du profil standard",
+      "employee": "Profil Salarié",
+      "employeeTarget": "Salaire mensuel stable",
+      "professional": "Profil Professionnel",
+      "professionalTarget": "Fonctionnaires, professionnels",
+      "weeks4to24": "4 à 24 semaines",
+      "6months": "6 mois",
+      "3months": "3 mois"
+    },
+    "why": {
+      "eyebrow": "Avantages",
+      "title": "Pourquoi E-GO ?",
+      "legal": "Sécurité juridique",
+      "legalDesc": "Contrat officiel, cadre légal.",
+      "process": "Process structuré",
+      "processDesc": "Vérification documents, suivi rigoureux.",
+      "trust": "Confiance",
+      "trustDesc": "Transparence, pas de frais cachés.",
+      "accessible": "Accessible à tous",
+      "accessibleDesc": "Un plan pour chaque profil."
+    },
+    "security": {
+      "eyebrow": "Sécurité & Contrat",
+      "title": "Cadre professionnel,",
+      "title2": "pas du crédit informel.",
+      "desc": "Contrat officiel, vérification des documents, échéancier clair.",
+      "contractSign": "Signature de contrat",
+      "contractSignDesc": "Contrat officiel avant toute livraison.",
+      "docCheck": "Vérification documents",
+      "docCheckDesc": "CNI, bulletins, attestation employeur.",
+      "transparentTracking": "Suivi transparent",
+      "transparentTrackingDesc": "Échéancier, rappels, historique.",
+      "dataProtection": "Protection des données",
+      "dataProtectionDesc": "Informations sécurisées et confidentielles."
+    },
+    "testimonials": {
+      "1": { "name": "Aminata K.", "role": "Commerçante, Abidjan", "text": "Mon iPhone en payant chaque semaine. Process clair et pro." },
+      "2": { "name": "Moussa D.", "role": "Fonctionnaire, Dakar", "text": "Le paiement mensuel correspond à mon salaire. Le contrat m'a rassuré." },
+      "3": { "name": "Fatou S.", "role": "Entrepreneuse, Abidjan", "text": "Transparence, pas de frais cachés. Je recommande !" },
+      "eyebrow": "Témoignages",
+      "title": "Ils nous font confiance"
+    },
+    "cta": {
+      "title": "Prêt à commencer ?",
+      "subtitle": "Choisissez votre modèle et démarrez votre demande.",
+      "startRequest": "Commencer ma demande",
+      "viewServices": "Voir les services"
+    }
+  },
+  "about": {
+    "badge": "À propos de E-GO",
+    "title": "Rendre la technologie",
+    "titleHighlight": "accessible",
+    "titleSuffix": "à tous.",
+    "subtitle": "E-GO est une entreprise spécialisée dans la location-vente d'iPhone, proposant un modèle de paiement structuré et accessible adapté aux réalités économiques locales.",
+    "cta": "Prêt à nous rejoindre ?",
+    "discoverServices": "Découvrir nos services",
+    "roleItems": ["La sélection et la vérification des appareils", "La formalisation des contrats", "La gestion administrative et financière des paiements", "Le suivi rigoureux des engagements", "L'accompagnement personnalisé des clients"],
+    "quote1": "Notre modèle repose sur un cadre structuré, sécurisé et transparent.",
+    "quote2": "Protection des vendeurs partenaires et sérénité des acheteurs.",
+    "parag1": "Créée pour répondre à une forte demande en smartphones haut de gamme, E-GO développe une solution innovante permettant aux clients d'accéder immédiatement à un iPhone tout en réglant le montant de manière progressive selon un échéancier défini.",
+    "roleIntro": "L'entreprise agit comme un intermédiaire organisé entre fournisseurs partenaires et clients finaux, en assurant :",
+    "parag2": "E-GO s'inscrit dans une dynamique de modernisation de l'accès à la technologie en Afrique, en proposant une alternative fiable aux paiements informels et aux systèmes de crédit non encadrés.",
+    "parag3": "À travers une approche professionnelle et responsable, nous contribuons à faciliter l'inclusion technologique tout en favorisant un commerce plus organisé et sécurisé dans le secteur des smartphones.",
+    "identity": "Notre identité",
+    "whoWeAre": "Qui sommes-nous ?",
+    "about1": "E-GO est une entreprise innovante spécialisée dans la location-vente d'iPhone en Afrique.",
+    "about2": "Nous sommes nés d'un constat simple : de nombreuses personnes souhaitent utiliser des iPhones récents, mais rencontrent des difficultés à effectuer un paiement comptant. E-GO apporte une solution moderne, structurée et sécurisée à cette réalité.",
+    "about3": "Notre rôle ne se limite pas à fournir un téléphone. Nous mettons en place un véritable système d'accompagnement financier permettant à chaque client d'accéder à la technologie premium tout en respectant sa capacité de paiement.",
+    "guaranteeIntro": "Nous sélectionnons des appareils authentiques, soigneusement testés et vérifiés afin de garantir :",
+    "guarantees": ["La qualité", "La performance", "La durabilité", "La sécurité d'utilisation"],
+    "pillarsEyebrow": "Notre fonctionnement",
+    "pillarsTitle": "Trois piliers fondamentaux",
+    "pillarsSubtitle": "Notre fonctionnement repose sur trois piliers fondamentaux :",
+    "pillar1Title": "La transparence",
+    "pillar1Desc": "Des conditions claires, des échéanciers précis et un suivi structuré.",
+    "pillar2Title": "La flexibilité",
+    "pillar2Desc": "Des modalités de paiement adaptées aux profils variés : commerçants, indépendants, salariés et fonctionnaires.",
+    "pillar3Title": "La confiance",
+    "pillar3Desc": "Une relation professionnelle durable avec nos clients et nos partenaires vendeurs.",
+    "positioning1": "E-GO se positionne comme un intermédiaire structuré entre fournisseurs et clients, en assurant la gestion administrative, le suivi des paiements et l'accompagnement personnalisé.",
+    "positioning2": "Nous ne vendons pas simplement un téléphone : nous facilitons l'accès à une expérience technologique moderne, accessible et responsable.",
+    "stats1": "Clients accompagnés",
+    "stats2": "Smartphones livrés",
+    "stats3": "Pays couverts",
+    "stats4": "Taux de satisfaction"
+  },
+  "services": {
+    "badge": "Nos services",
+    "title": "Des solutions",
+    "titleHighlight": "sur mesure",
+    "titleSuffix": "pour accéder à votre smartphone.",
+    "subtitle": "Location-vente, paiement flexible, troc et suivi. Un service adapté à chaque profil.",
+    "cta": "Trouvez l'offre qui vous correspond",
+    "viewSchedules": "Voir les échéanciers",
+    "rentalTitle": "Location-vente",
+    "rentalDesc": "iPhone immédiatement. Paiement sur 1 à 6 mois. Contrat officiel.",
+    "rentalItems": ["1 à 6 mois", "Contrat signé", "Livraison immédiate", "Suivi en temps réel"],
+    "flexibleTitle": "Paiement flexible",
+    "flexibleDesc": "Un rythme adapté à vos revenus.",
+    "flexibleOptions": [{"title": "Hebdomadaire", "desc": "Commerçants, indépendants"}, {"title": "Quinzaine", "desc": "Travailleurs réguliers"}, {"title": "Mensuel", "desc": "Salariés, fonctionnaires"}],
+    "tradeTitle": "Troc & échange",
+    "tradeDesc": "Ancien smartphone ? Échangez-le. Valeur déduite de l'échéancier.",
+    "tradeItems": ["Évaluation gratuite", "Réduction sur échéancier", "Large gamme acceptée"],
+    "trackingTitle": "Suivi & documents officiels",
+    "trackingDesc": "Contrat, échéancier, reçus, attestations. Tout est traçable.",
+    "trackingItems": ["Contrat de location-vente", "Échéancier de paiement détaillé", "Reçus de paiement à chaque échéance", "Attestation de propriété à la fin"]
+  },
+  "schedules": {
+    "badge": "E-GO",
+    "title": "Les échéanciers",
+    "titleHighlight": "de paiement",
+    "subtitle": "Plusieurs profils adaptés à vos capacités financières. Chaque profil est défini selon votre statut et le modèle d'iPhone choisi.",
+    "cta": "Prêt à démarrer ?",
+    "ctaSubtitle": "Contactez-nous pour votre échéancier personnalisé.",
+    "contactAdvisor": "Contacter un conseiller",
+    "contactUs": "Nous contacter",
+    "intro": "Afin de s'adapter aux différentes catégories de clients et à leurs capacités financières, E-GO propose plusieurs profils d'échéanciers de paiement. Chaque profil est défini selon le statut du client ainsi que le modèle d'iPhone choisi.",
+    "downPayment": "Les paiements se font toujours après un acompte minimum de 40 % du prix du téléphone.",
+    "forWho": "Pour qui ?",
+    "phonesLabel": "Téléphones concernés",
+    "durationLabel": "Durée de paiement",
+    "modalityLabel": "Modalité de paiement",
+    "conclusionTitle": "Conclusion",
+    "conclusion1": "Grâce à ses différents profils d'échéanciers, E-GO offre une solution flexible et accessible permettant à chaque client d'acquérir un iPhone tout en choisissant un mode de paiement adapté à sa situation financière.",
+    "conclusion2": "L'objectif de E-GO est de faciliter l'accès aux smartphones haut de gamme tout en maintenant un système de paiement structuré et sécurisé.",
+    "profiles": {
+      "1": {"title": "Profil Standard", "subtitle": "Paiement hebdomadaire", "target": "Clients sans revenu mensuel fixe", "targets": ["Commerçants", "Entrepreneurs", "Travailleurs indépendants", "Étudiants", "Particuliers"], "phones": "iPhone XR jusqu'à la dernière sortie Apple", "duration": "4 à 24 semaines (1 à 6 mois)", "modality": "Paiement chaque semaine selon l'échéancier du contrat"},
+      "2": {"title": "Paiement par quinzaine", "subtitle": "Option du profil standard", "target": "Certains modèles", "targets": [], "phones": "iPhone 11 jusqu'à la dernière sortie Apple", "duration": "6 mois", "modality": "12 échéances, un paiement toutes les deux semaines"},
+      "3": {"title": "Profil Salarié Standard", "subtitle": "Paiement mensuel", "target": "Clients avec salaire mensuel stable", "targets": [], "phones": "iPhone 12 Pro jusqu'à la dernière sortie Apple", "duration": "3 mois", "modality": "3 échéances mensuelles, plus l'acompte initial"},
+      "4": {"title": "Profil Professionnel Fonctionnaire", "subtitle": "Accès haut de gamme", "target": "Fonctionnaires et professionnels à forte stabilité salariale", "targets": [], "phones": "iPhone 15 Pro jusqu'à la dernière sortie Apple", "duration": "6 mois", "modality": "6 échéances mensuelles, plus l'acompte initial"}
+    }
+  },
+  "articles": {
+    "badge": "Blog",
+    "title": "Guides, conseils &",
+    "titleHighlight": "actualités.",
+    "subtitle": "Guides, conseils et actualités sur la location-vente de smartphones en Afrique. Restez informé avec E-GO.",
+    "read": "Lire",
+    "readArticle": "Lire l'article",
+    "cta": "Vous avez des questions ?",
+    "startRequest": "Commencer ma demande",
+    "backToArticles": "Retour aux articles",
+    "prevArticle": "Article précédent",
+    "nextArticle": "Article suivant",
+    "ctaAction": "Prêt à passer à l'action ?",
+    "ctaActionSubtitle": "Découvrez nos échéanciers et commencez votre demande.",
+    "readTimeSuffix": "de lecture"
+  },
+  "contact": {
+    "title": "Contact & Localisations",
+    "subtitle": "Siège à Abidjan. Présents à Dakar, Accra, Lagos et Nairobi. Expansion vers Lomé et Douala.",
+    "headquarters": "Siège",
+    "hqLabel": "Siège social E-GO",
+    "cta": "Vous êtes dans l'une de ces villes ?",
+    "ctaSubtitle": "Contactez-nous pour démarrer.",
+    "contactUs": "Nous contacter",
+    "viewSchedules": "Voir les échéanciers"
+  },
+  "legal": {
+    "lastUpdate": "Dernière mise à jour : mars 2026"
+  }
+}

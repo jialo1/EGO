@@ -1,15 +1,22 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, Clock, Tag, Calendar } from "lucide-react";
 import { articles, getArticleBySlug } from "@/lib/articles";
+import { Link } from "@/i18n/routing";
+import { getTranslations } from "next-intl/server";
 import PageHero from "@/components/PageHero";
+import CtaSection from "@/components/CtaSection";
 
 export function generateStaticParams() {
   return articles.map((article) => ({ slug: article.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const article = getArticleBySlug(params.slug);
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const article = getArticleBySlug(slug);
   if (!article) return { title: "Article introuvable | E-GO" };
   return {
     title: `${article.title} | E-GO`,
@@ -45,10 +52,7 @@ function renderMarkdown(content: string) {
     switch (el.type) {
       case "h2":
         return (
-          <h2
-            key={i}
-            className="text-2xl font-bold mt-10 mb-4 text-foreground"
-          >
+          <h2 key={i} className="text-2xl font-bold mt-10 mb-4 text-foreground">
             {el.content}
           </h2>
         );
@@ -79,11 +83,13 @@ function renderMarkdown(content: string) {
 export default async function ArticlePage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
   const article = getArticleBySlug(slug);
   if (!article) notFound();
+
+  const t = await getTranslations("articles");
 
   const currentIndex = articles.findIndex((a) => a.slug === slug);
   const prev = currentIndex > 0 ? articles[currentIndex - 1] : null;
@@ -105,7 +111,7 @@ export default async function ArticlePage({
             className="inline-flex items-center gap-2 text-sm text-muted hover:text-foreground transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
-            Retour aux articles
+            {t("backToArticles")}
           </Link>
           <div className="flex flex-wrap items-center gap-3 mt-4">
             <span className="inline-flex items-center gap-1.5 text-xs font-semibold bg-primary/10 text-primary px-3 py-1 rounded-full">
@@ -118,13 +124,12 @@ export default async function ArticlePage({
             </span>
             <span className="inline-flex items-center gap-1.5 text-xs text-muted">
               <Clock className="w-3 h-3" />
-              {article.readTime} de lecture
+              {article.readTime} {t("readTimeSuffix")}
             </span>
           </div>
         </div>
       </section>
 
-      {/* IMAGE */}
       <section className="pb-12">
         <div className="max-w-3xl mx-auto px-6">
           <div className="bg-gradient-to-br from-primary/5 to-accent/5 border border-border rounded-2xl flex items-center justify-center py-16">
@@ -133,14 +138,12 @@ export default async function ArticlePage({
         </div>
       </section>
 
-      {/* CONTENU */}
       <section className="pb-24">
         <div className="max-w-3xl mx-auto px-6">
           <article className="prose-custom">{renderMarkdown(article.content)}</article>
         </div>
       </section>
 
-      {/* NAVIGATION ARTICLES */}
       <section className="pb-24">
         <div className="max-w-3xl mx-auto px-6">
           <div className="border-t border-border pt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -151,7 +154,7 @@ export default async function ArticlePage({
               >
                 <span className="text-xs text-muted flex items-center gap-1 mb-2">
                   <ArrowLeft className="w-3 h-3" />
-                  Article précédent
+                  {t("prevArticle")}
                 </span>
                 <p className="font-semibold text-sm group-hover:text-primary transition-colors leading-snug">
                   {prev.title}
@@ -164,7 +167,7 @@ export default async function ArticlePage({
                 className="group bg-surface-light border border-border rounded-xl p-6 hover:border-primary/30 hover:shadow-sm transition-all sm:text-right"
               >
                 <span className="text-xs text-muted flex items-center gap-1 mb-2 sm:justify-end">
-                  Article suivant
+                  {t("nextArticle")}
                   <ArrowRight className="w-3 h-3" />
                 </span>
                 <p className="font-semibold text-sm group-hover:text-primary transition-colors leading-snug">
@@ -176,24 +179,18 @@ export default async function ArticlePage({
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24 bg-surface">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            Prêt à passer à l&apos;action ?
-          </h2>
-          <p className="text-muted max-w-md mx-auto mb-8">
-            Découvrez nos échéanciers et commencez votre demande.
-          </p>
-          <Link
-            href="/echeanciers"
-            className="inline-flex items-center justify-center gap-2 bg-primary text-white font-semibold px-8 py-4 rounded-xl hover:bg-primary-dark transition-all hover:scale-[1.02] shadow-md"
-          >
-            Commencer ma demande
-            <ArrowRight className="w-5 h-5" />
-          </Link>
-        </div>
-      </section>
+      <CtaSection
+        className="bg-surface"
+        title={t("ctaAction")}
+        subtitle={t("ctaActionSubtitle")}
+        links={[
+          {
+            href: "/echeanciers",
+            label: t("startRequest"),
+            icon: <ArrowRight className="w-5 h-5" />,
+          },
+        ]}
+      />
     </>
   );
 }
