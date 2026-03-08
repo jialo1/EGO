@@ -61,13 +61,16 @@ export default function Navigation() {
           </div>
         </div>
 
-        <button
-          className="md:hidden text-foreground"
-          onClick={() => setOpen(!open)}
-          aria-label="Menu"
-        >
-          {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+        <div className="md:hidden flex items-center gap-4">
+          <LanguageSwitcher />
+          <button
+            className="text-foreground"
+            onClick={() => setOpen(!open)}
+            aria-label="Menu"
+          >
+            {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </div>
 
       {open && (
@@ -95,9 +98,6 @@ export default function Navigation() {
           >
             {t("start")}
           </Link>
-          <div className="pt-2 border-t border-border">
-            <LanguageSwitcher />
-          </div>
         </div>
       )}
     </nav>
