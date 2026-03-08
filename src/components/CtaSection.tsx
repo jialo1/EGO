@@ -1,4 +1,7 @@
-import Link from "next/link";
+"use client";
+
+import { Link } from "@/i18n/routing";
+import { useActiveLocale } from "@/hooks/useActiveLocale";
 import type { ReactNode } from "react";
 
 interface CtaLink {
@@ -23,6 +26,8 @@ const linkStyles = {
 };
 
 export default function CtaSection({ title, subtitle, links, className = "" }: CtaSectionProps) {
+  const locale = useActiveLocale();
+
   return (
     <section className={`py-24 ${className}`}>
       <div className="max-w-4xl mx-auto px-6 text-center">
@@ -47,7 +52,7 @@ export default function CtaSection({ title, subtitle, links, className = "" }: C
             }
 
             return (
-              <Link key={link.href} href={link.href} className={style}>
+              <Link key={link.href} href={link.href} locale={locale} className={style}>
                 {link.label}
                 {link.icon}
               </Link>

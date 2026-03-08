@@ -2,11 +2,12 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import { useActiveLocale } from "@/hooks/useActiveLocale";
 import { ArrowRight, Star } from "lucide-react";
 import { products, categories, type Product } from "@/lib/products";
 
-function ProductCard({ product }: { product: Product }) {
+function ProductCard({ product, locale }: { product: Product; locale: "fr" | "en" }) {
   return (
     <div className="group bg-surface-light border border-border rounded-2xl overflow-hidden hover:border-primary/30 hover:shadow-lg transition-all flex flex-col">
       {/* Image */}
@@ -61,6 +62,7 @@ function ProductCard({ product }: { product: Product }) {
           </div>
           <Link
             href="/echeanciers"
+            locale={locale}
             className="block w-full text-center bg-primary text-white text-sm font-semibold py-2.5 rounded-lg hover:bg-primary-dark transition-colors"
           >
             Commencer ma demande
@@ -73,6 +75,7 @@ function ProductCard({ product }: { product: Product }) {
 
 export default function ProductCatalog() {
   const [activeCategory, setActiveCategory] = useState("all");
+  const locale = useActiveLocale();
 
   const filtered =
     activeCategory === "all"
@@ -116,7 +119,7 @@ export default function ProductCatalog() {
         {/* Grille produits */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {filtered.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard key={product.id} product={product} locale={locale} />
           ))}
         </div>
 
@@ -132,6 +135,7 @@ export default function ProductCatalog() {
           </div>
           <Link
             href="/echeanciers"
+            locale={locale}
             className="inline-flex items-center gap-2 bg-primary text-white font-semibold px-6 py-3 rounded-xl hover:bg-primary-dark transition-all shrink-0 shadow-md"
           >
             Voir les échéanciers

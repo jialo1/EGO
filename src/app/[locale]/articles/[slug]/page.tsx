@@ -7,13 +7,16 @@ import PageHero from "@/components/PageHero";
 import CtaSection from "@/components/CtaSection";
 
 export function generateStaticParams() {
-  return articles.map((article) => ({ slug: article.slug }));
+  const locales = ["fr", "en"] as const;
+  return articles.flatMap((article) =>
+    locales.map((locale) => ({ locale, slug: article.slug }))
+  );
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }) {
   const { slug } = await params;
   const article = getArticleBySlug(slug);
@@ -83,7 +86,7 @@ function renderMarkdown(content: string) {
 export default async function ArticlePage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }) {
   const { slug } = await params;
   const article = getArticleBySlug(slug);

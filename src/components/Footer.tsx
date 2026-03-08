@@ -1,6 +1,7 @@
 "use client";
 
 import { Link } from "@/i18n/routing";
+import { useActiveLocale } from "@/hooks/useActiveLocale";
 import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -10,13 +11,14 @@ import { locations, hqAddress } from "@/lib/locations";
 export default function Footer() {
   const t = useTranslations("common.footer");
   const tNav = useTranslations("common.nav");
+  const locale = useActiveLocale();
 
   return (
     <footer className="bg-foreground text-background">
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="md:col-span-1">
-            <Link href="/" className="inline-block mb-4">
+            <Link href="/" locale={locale} className="inline-block mb-4">
               <Image
                 src="/logo.png"
                 alt="E-GO"
@@ -37,6 +39,7 @@ export default function Footer() {
                 <Link
                   key={link.href}
                   href={link.href}
+                  locale={locale}
                   className="block text-sm text-white/60 hover:text-white transition-colors"
                 >
                   {tNav(link.labelKey)}
@@ -106,10 +109,10 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} E-GO. {t("rights")}
           </p>
           <div className="flex gap-6">
-            <Link href="/conditions-generales" className="text-xs text-white/40 hover:text-white transition-colors">
+            <Link href="/conditions-generales" locale={locale} className="text-xs text-white/40 hover:text-white transition-colors">
               {t("terms")}
             </Link>
-            <Link href="/politique-confidentialite" className="text-xs text-white/40 hover:text-white transition-colors">
+            <Link href="/politique-confidentialite" locale={locale} className="text-xs text-white/40 hover:text-white transition-colors">
               {t("privacy")}
             </Link>
           </div>

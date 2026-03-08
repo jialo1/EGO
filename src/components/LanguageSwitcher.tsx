@@ -1,18 +1,7 @@
 "use client";
 
-import { usePathname as useNextPathname } from "next/navigation";
 import { useRouter, usePathname } from "@/i18n/routing";
-
-/**
- * Dérive la locale active depuis l'URL (pathname).
- * Avec localePrefix: "as-needed", le français n'a pas de préfixe (/), l'anglais a /en.
- * On ne peut pas utiliser useLocale() car le layout racine ne se ré-exécute pas
- * lors de la navigation client, donc le NextIntlClientProvider garde une locale obsolète.
- */
-function useActiveLocale(): "fr" | "en" {
-  const fullPathname = useNextPathname() ?? "/";
-  return fullPathname.startsWith("/en") ? "en" : "fr";
-}
+import { useActiveLocale } from "@/hooks/useActiveLocale";
 
 export default function LanguageSwitcher() {
   const locale = useActiveLocale();

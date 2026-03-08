@@ -1,6 +1,7 @@
 "use client";
 
 import { Link, usePathname } from "@/i18n/routing";
+import { useActiveLocale } from "@/hooks/useActiveLocale";
 import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -11,6 +12,7 @@ import LanguageSwitcher from "./LanguageSwitcher";
 export default function Navigation() {
   const t = useTranslations("common.nav");
   const pathname = usePathname();
+  const locale = useActiveLocale();
   const [open, setOpen] = useState(false);
 
   const isActive = (href: string) => {
@@ -21,7 +23,7 @@ export default function Navigation() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <Link href="/" className="flex items-center group hover:opacity-90 transition-opacity">
+        <Link href="/" locale={locale} className="flex items-center group hover:opacity-90 transition-opacity">
           <Image
             src="/icon.jpeg"
             alt="E-GO"
@@ -37,6 +39,7 @@ export default function Navigation() {
             <Link
               key={link.href}
               href={link.href}
+              locale={locale}
               className={`text-sm transition-colors ${
                 isActive(link.href)
                   ? "text-foreground font-semibold"
@@ -48,6 +51,7 @@ export default function Navigation() {
           ))}
           <Link
             href="/echeanciers"
+            locale={locale}
             className="bg-primary text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-primary-dark transition-colors"
           >
             {t("start")}
@@ -72,6 +76,7 @@ export default function Navigation() {
             <Link
               key={link.href}
               href={link.href}
+              locale={locale}
               onClick={() => setOpen(false)}
               className={`block transition-colors ${
                 isActive(link.href)
@@ -84,6 +89,7 @@ export default function Navigation() {
           ))}
           <Link
             href="/echeanciers"
+            locale={locale}
             onClick={() => setOpen(false)}
             className="block bg-primary text-white text-center font-semibold px-5 py-3 rounded-lg hover:bg-primary-dark transition-colors"
           >
