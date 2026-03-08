@@ -84,9 +84,12 @@
       "employeeTarget": "Salaire mensuel stable",
       "professional": "Profil Professionnel",
       "professionalTarget": "Fonctionnaires, professionnels",
+      "enterprise": "Profil Entreprise",
+      "enterpriseTarget": "Entreprises (min. 3 bénéficiaires)",
       "weeks4to24": "4 à 24 semaines",
       "6months": "6 mois",
-      "3months": "3 mois"
+      "3months": "3 mois",
+      "3to6months": "3 à 6 mois"
     },
     "why": {
       "eyebrow": "Avantages",
@@ -209,7 +212,8 @@
       "1": {"title": "Profil Standard", "subtitle": "Paiement hebdomadaire", "target": "Clients sans revenu mensuel fixe", "targets": ["Commerçants", "Entrepreneurs", "Travailleurs indépendants", "Étudiants", "Particuliers"], "phones": "iPhone XR jusqu'à la dernière sortie Apple", "duration": "4 à 24 semaines (1 à 6 mois)", "modality": "Paiement chaque semaine selon l'échéancier du contrat"},
       "2": {"title": "Paiement par quinzaine", "subtitle": "Option du profil standard", "target": "Certains modèles", "targets": [], "phones": "iPhone 11 jusqu'à la dernière sortie Apple", "duration": "6 mois", "modality": "12 échéances, un paiement toutes les deux semaines"},
       "3": {"title": "Profil Salarié Standard", "subtitle": "Paiement mensuel", "target": "Clients avec salaire mensuel stable", "targets": [], "phones": "iPhone 12 Pro jusqu'à la dernière sortie Apple", "duration": "3 mois", "modality": "3 échéances mensuelles, plus l'acompte initial"},
-      "4": {"title": "Profil Professionnel Fonctionnaire", "subtitle": "Accès haut de gamme", "target": "Fonctionnaires et professionnels à forte stabilité salariale", "targets": [], "phones": "iPhone 15 Pro jusqu'à la dernière sortie Apple", "duration": "6 mois", "modality": "6 échéances mensuelles, plus l'acompte initial"}
+      "4": {"title": "Profil Professionnel Fonctionnaire", "subtitle": "Accès haut de gamme", "target": "Fonctionnaires et professionnels à forte stabilité salariale", "targets": [], "phones": "iPhone 15 Pro jusqu'à la dernière sortie Apple", "duration": "6 mois", "modality": "6 échéances mensuelles, plus l'acompte initial"},
+      "5": {"title": "Profil Entreprise", "subtitle": "Offre B2B", "target": "Employés d'une même entreprise ou organisation (minimum 3 bénéficiaires)", "targets": ["Entreprises", "Organisations", "Minimum 3 bénéficiaires"], "phones": "iPhone 12 Pro jusqu'à la dernière génération Apple", "duration": "3 à 6 mois", "modality": "Acompte initial 30 % à 40 %, solde en mensualités"}
     }
   },
   "articles": {

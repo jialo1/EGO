@@ -84,9 +84,12 @@
       "employeeTarget": "Stable monthly salary",
       "professional": "Professional Profile",
       "professionalTarget": "Civil servants, professionals",
+      "enterprise": "Enterprise Profile",
+      "enterpriseTarget": "Companies (min. 3 beneficiaries)",
       "weeks4to24": "4 to 24 weeks",
       "6months": "6 months",
-      "3months": "3 months"
+      "3months": "3 months",
+      "3to6months": "3 to 6 months"
     },
     "why": {
       "eyebrow": "Benefits",
@@ -209,7 +212,8 @@
       "1": {"title": "Standard Profile", "subtitle": "Weekly payment", "target": "Clients without fixed monthly income", "targets": ["Merchants", "Entrepreneurs", "Self-employed", "Students", "Individuals"], "phones": "iPhone XR up to latest Apple release", "duration": "4 to 24 weeks (1 to 6 months)", "modality": "Payment each week according to the contract schedule"},
       "2": {"title": "Bi-weekly payment", "subtitle": "Standard profile option", "target": "Certain models", "targets": [], "phones": "iPhone 11 up to latest Apple release", "duration": "6 months", "modality": "12 installments, one payment every two weeks"},
       "3": {"title": "Standard Employee Profile", "subtitle": "Monthly payment", "target": "Clients with stable monthly salary", "targets": [], "phones": "iPhone 12 Pro up to latest Apple release", "duration": "3 months", "modality": "3 monthly installments, plus initial down payment"},
-      "4": {"title": "Professional Civil Servant Profile", "subtitle": "Premium access", "target": "Civil servants and professionals with strong salary stability", "targets": [], "phones": "iPhone 15 Pro up to latest Apple release", "duration": "6 months", "modality": "6 monthly installments, plus initial down payment"}
+      "4": {"title": "Professional Civil Servant Profile", "subtitle": "Premium access", "target": "Civil servants and professionals with strong salary stability", "targets": [], "phones": "iPhone 15 Pro up to latest Apple release", "duration": "6 months", "modality": "6 monthly installments, plus initial down payment"},
+      "5": {"title": "Enterprise Profile", "subtitle": "B2B offer", "target": "Employees from the same company or organization (minimum 3 beneficiaries)", "targets": ["Companies", "Organizations", "Minimum 3 beneficiaries"], "phones": "iPhone 12 Pro up to latest Apple generation", "duration": "3 to 6 months", "modality": "Initial down payment 30% to 40%, balance in monthly installments"}
     }
   },
   "articles": {

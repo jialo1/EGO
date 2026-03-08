@@ -6,13 +6,14 @@ import {
   Smartphone,
   Users,
   Briefcase,
+  Building2,
 } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import HeroWithImage from "@/components/HeroWithImage";
 import CtaSection from "@/components/CtaSection";
 import { contactEmail } from "@/lib/locations";
 
-const icons = [Clock, Calendar, Users, Briefcase];
+const icons = [Clock, Calendar, Users, Briefcase, Building2];
 
 export async function generateMetadata() {
   const t = await getTranslations("schedules");
@@ -24,7 +25,7 @@ export async function generateMetadata() {
 
 export default async function Echeanciers() {
   const t = await getTranslations("schedules");
-  const profiles = [1, 2, 3, 4].map((i) => {
+  const profiles = [1, 2, 3, 4, 5].map((i) => {
     const p = t.raw(`profiles.${i}`) as { title: string; subtitle: string; target: string; targets: string[]; phones: string; duration: string; modality: string };
     return { id: i, ...p, color: i === 2 ? "accent" as const : "primary" as const };
   });

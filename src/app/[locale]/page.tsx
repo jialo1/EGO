@@ -19,6 +19,7 @@ import {
   Package,
   CheckCircle2,
   Zap,
+  Building2,
 } from "lucide-react";
 import HeroWithImage from "@/components/HeroWithImage";
 import SectionHeader from "@/components/SectionHeader";
@@ -135,6 +136,7 @@ export default async function Home() {
               { icon: Calendar, titleKey: "fortnight", targetKey: "fortnightTarget", durationKey: "6months", highlight: true },
               { icon: Users, titleKey: "employee", targetKey: "employeeTarget", durationKey: "3months", highlight: false },
               { icon: TrendingUp, titleKey: "professional", targetKey: "professionalTarget", durationKey: "6months", highlight: false },
+              { icon: Building2, titleKey: "enterprise", targetKey: "enterpriseTarget", durationKey: "3to6months", highlight: false },
             ].map(({ icon: Icon, titleKey, targetKey, durationKey, highlight }) => (
               <div
                 key={titleKey}
