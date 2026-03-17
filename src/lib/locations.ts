@@ -84,8 +84,8 @@ export const locations: Location[] = [
     status: "En expansion",
     description: "En expansion.",
     isHQ: false,
-    active: false,
-    phones: [],
+    active: true,
+    phones: ["+237 6 97 70 21 05"],
     emails: null,
   },
 ];

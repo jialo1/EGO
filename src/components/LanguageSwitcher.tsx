@@ -1,16 +1,18 @@
 "use client";
 
-import { useRouter, usePathname } from "@/i18n/routing";
+import { usePathname } from "@/i18n/routing";
 import { useActiveLocale } from "@/hooks/useActiveLocale";
 
 export default function LanguageSwitcher() {
   const locale = useActiveLocale();
-  const router = useRouter();
   const pathname = usePathname() || "/";
 
   const switchLocale = (next: "fr" | "en") => {
     if (next === locale) return;
-    router.replace(pathname, { locale: next });
+    // Définir le cookie pour que le middleware respecte le choix (évite redirection inverse)
+    document.cookie = `NEXT_LOCALE=${next}; path=/; max-age=31536000; SameSite=Lax`;
+    const url = next === "en" ? (pathname === "/" ? "/en" : `/en${pathname}`) : pathname || "/";
+    window.location.href = url;
   };
 
   return (
